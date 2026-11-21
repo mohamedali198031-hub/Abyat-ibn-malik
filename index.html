@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ألفية ابن مالك — أولى ثانوي أزهر (الترم الأول ٢٠٢٦–٢٠٢٧)</title>
+
+  <!-- Google Fonts: Amiri for classical Arabic poetry & Cairo for modern UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Custom Theme Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            parchment: {
+              DEFAULT: '#F6F1E7',
+              dark: '#EFE7D6',
+              card: '#FFFDF8',
+              border: '#E2D6BE',
+            },
+            azhar: {
+              DEFAULT: '#1B4D3E',
+              dark: '#13382C',
+              light: '#286653',
+              soft: '#E8F0ED',
+            },
+            gold: {
+              DEFAULT: '#B8860B',
+              soft: '#C5A059',
+              pale: '#FBF5E6',
+            },
+            ink: {
+              DEFAULT: '#2B241D',
+              muted: '#5C4F42',
+            },
+          },
+          fontFamily: {
+            amiri: ['Amiri', 'serif'],
+            cairo: ['Cairo', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* Subtle Islamic geometric pattern overlay for Hero */
+    .islamic-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23C5A059' stroke-width='0.75' stroke-opacity='0.22'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z'/%3E%3Ccircle cx='30' cy='30' r='12'/%3E%3Cpath d='M15 15L45 15L45 45L15 45Z'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="bg-parchment text-ink font-cairo min-h-screen flex flex-col antialiased selection:bg-azhar/20 selection:text-azhar-dark">
+
+  <!-- ==================== HERO & HEADER ==================== -->
+  <header class="relative bg-azhar text-parchment-card overflow-hidden border-b-4 border-gold-soft shadow-md">
+    <!-- Subtle Geometric Pattern Layer -->
+    <div class="absolute inset-0 islamic-pattern pointer-events-none"></div>
+
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-7 sm:py-9">
+      <!-- Top Row: Badge & Font Controls -->
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+        <div class="inline-flex items-center gap-2 bg-azhar-dark/70 border border-gold-soft/50 text-gold-pale px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold">
+          <span class="w-2 h-2 rounded-full bg-gold-soft"></span>
+          <span>الأزهر الشريف • الصف الأول الثانوي • الترم الأول ٢٠٢٦ – ٢٠٢٧</span>
+        </div>
+
+        <!-- Font Size & Reset Controls -->
+        <div class="flex items-center gap-2">
+          <div class="inline-flex items-center bg-azhar-dark/75 border border-gold-soft/40 rounded-xl p-1" role="group" aria-label="التحكم في حجم الخط">
+            <button id="btn-font-dec" type="button" title="تصغير الخط" class="px-2.5 py-1 text-sm font-bold text-parchment-card hover:bg-azhar-light rounded-lg transition cursor-pointer">أ-</button>
+            <span class="text-gold-soft/60 px-1 text-xs">|</span>
+            <button id="btn-font-inc" type="button" title="تكبير الخط" class="px-2.5 py-1 text-sm font-bold text-parchment-card hover:bg-azhar-light rounded-lg transition cursor-pointer">أ+</button>
+          </div>
+          <button id="btn-reset-modal" type="button" title="تصفير التقدم" class="px-3 py-1.5 text-xs sm:text-sm bg-azhar-dark/75 hover:bg-red-900/70 border border-gold-soft/40 text-parchment-card rounded-xl transition cursor-pointer">
+            إعادة الضبط
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Title & Subtitle -->
+      <div class="text-center max-w-3xl mx-auto">
+        <h1 class="font-amiri text-3xl sm:text-4xl lg:text-5xl font-bold text-parchment-card tracking-wide leading-tight mb-3">
+          ألفية ابن مالك — أولى ثانوي أزهر
+        </h1>
+        <p class="text-parchment-dark/95 text-sm sm:text-base lg:text-lg leading-relaxed mb-6">
+          المنهج المقرر للترم الأول (٢٠٢٦ – ٢٠٢٧) | شرح كل بيت على حدة بأسلوب ابن عقيل المبسط من <strong class="text-gold-pale">باب الكلام</strong> حتى نهاية <strong class="text-gold-pale">باب المبتدأ والخبر</strong>
+        </p>
+      </div>
+
+      <!-- Student Progress Card -->
+      <div class="max-w-3xl mx-auto bg-azhar-dark/70 backdrop-blur-sm border border-gold-soft/40 rounded-2xl p-4 sm:p-5 shadow-inner">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5 text-sm">
+          <div class="flex items-center gap-2 font-semibold text-gold-pale">
+            <svg class="w-5 h-5 text-gold-soft" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span id="progress-text">تمت مذاكرة 0 من أصل 0 بيت</span>
+          </div>
+          <span id="progress-percent" class="font-bold text-gold-pale bg-azhar px-2.5 py-0.5 rounded-lg border border-gold-soft/40">0%</span>
+        </div>
+        <div class="w-full h-3 bg-azhar/80 rounded-full overflow-hidden border border-gold-soft/30">
+          <div id="progress-bar" class="h-full bg-gradient-to-l from-gold-soft to-amber-300 rounded-full transition-all duration-500" style="width: 0%;"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== STICKY NAVIGATION & CONTROLS ==================== -->
+  <nav class="sticky top-0 z-30 bg-parchment-dark/95 backdrop-blur-md border-b border-parchment-border shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <!-- Chapter Tabs -->
+      <div id="chapter-tabs" class="flex flex-wrap items-center justify-center gap-2 mb-3">
+        <!-- Rendered dynamically via JS -->
+      </div>
+
+      <!-- Search, Filter & Review Mode Bar (hidden on Quiz tab) -->
+      <div id="study-toolbar" class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-2.5 pt-2 border-t border-parchment-border/80">
+        <!-- Search Input -->
+        <div class="relative flex-1">
+          <input
+            id="search-input"
+            type="text"
+            placeholder="ابحث عن بيت، قاعدة نحوية، مثال، أو كلمة (بدون الحاجة للتشكيل)..."
+            class="w-full bg-parchment-card border border-parchment-border focus:border-azhar focus:ring-2 focus:ring-azhar/20 rounded-xl pr-10 pl-9 py-2 text-sm text-ink placeholder:text-ink-muted/70 outline-none transition"
+          />
+          <svg class="w-4 h-4 text-ink-muted absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"/>
+          </svg>
+          <button id="btn-clear-search" type="button" class="hidden absolute left-2.5 top-1/2 -translate-y-1/2 text-ink-muted hover:text-ink p-1 rounded-lg cursor-pointer" title="مسح البحث">
+            ✕
+          </button>
+        </div>
+
+        <!-- Filter & Review Mode Toggles -->
+        <div class="flex flex-wrap items-center gap-2">
+          <div class="inline-flex bg-parchment-card border border-parchment-border rounded-xl p-1 text-xs sm:text-sm">
+            <button data-filter="all" class="filter-btn px-2.5 py-1 rounded-lg font-semibold transition cursor-pointer bg-azhar text-parchment-card">الكل</button>
+            <button data-filter="remaining" class="filter-btn px-2.5 py-1 rounded-lg font-semibold transition cursor-pointer text-ink-muted hover:text-ink">المتبقي</button>
+            <button data-filter="done" class="filter-btn px-2.5 py-1 rounded-lg font-semibold transition cursor-pointer text-ink-muted hover:text-ink">المُتقن</button>
+          </div>
+
+          <button
+            id="btn-review-mode"
+            type="button"
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-semibold border border-gold-soft bg-gold-pale text-ink hover:bg-gold-soft/20 transition cursor-pointer"
+          >
+            <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+            </svg>
+            <span id="review-mode-label">وضع المراجعة (إخفاء الشرح)</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== MAIN CONTENT AREA ==================== -->
+  <main class="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-7">
+    <!-- Chapter Header Banner (for Study Mode) -->
+    <section id="chapter-banner" class="mb-6 bg-parchment-card border border-parchment-border rounded-2xl p-5 shadow-sm relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-1.5 h-full bg-azhar"></div>
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <span id="chapter-badge" class="inline-block text-xs font-bold text-gold bg-gold-pale border border-gold-soft/40 px-2.5 py-0.5 rounded-full mb-1.5"></span>
+          <h2 id="chapter-title" class="font-amiri text-2xl sm:text-3xl font-bold text-azhar-dark"></h2>
+          <p id="chapter-desc" class="text-sm text-ink-muted mt-1 leading-relaxed"></p>
+        </div>
+        <div class="flex flex-col items-start sm:items-end gap-1.5">
+          <span id="chapter-stats" class="text-xs sm:text-sm font-bold text-azhar bg-azhar-soft px-3 py-1 rounded-xl border border-azhar/20"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Verses Container -->
+    <section id="verses-container" class="space-y-5">
+      <!-- Verse cards rendered dynamically via JS -->
+    </section>
+
+    <!-- Empty Search State -->
+    <section id="empty-state" class="hidden text-center py-14 bg-parchment-card border border-parchment-border rounded-2xl">
+      <div class="text-4xl mb-3">📜</div>
+      <h3 class="text-lg font-bold text-azhar-dark mb-1">لا توجد أبيات مطابقة لبحثك</h3>
+      <p class="text-sm text-ink-muted mb-4">جرّب البحث بكلمة أخرى أو قم بتغيير التصفية الحالية.</p>
+      <button id="btn-reset-filters" type="button" class="px-4 py-2 bg-azhar text-parchment-card rounded-xl text-sm font-semibold hover:bg-azhar-dark transition cursor-pointer">
+        عرض جميع الأبيات
+      </button>
+    </section>
+
+    <!-- Interactive Azhar Quiz Section -->
+    <section id="quiz-section" class="hidden">
+      <div class="bg-parchment-card border border-parchment-border rounded-2xl p-5 sm:p-7 shadow-sm mb-6">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-parchment-border pb-4 mb-6">
+          <div>
+            <span class="inline-block text-xs font-bold text-gold bg-gold-pale border border-gold-soft/40 px-3 py-0.5 rounded-full mb-1.5">بنك أسئلة أزهري شامل</span>
+            <h2 class="font-amiri text-2xl sm:text-3xl font-bold text-azhar-dark">اختبر نفسك في منهج الترم الأول</h2>
+            <p class="text-sm text-ink-muted mt-1">أسئلة اختيار من متعدد محاكية لامتحانات الصف الأول الثانوي الأزهري على الأبواب الأربعة.</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="bg-azhar-soft border border-azhar/20 rounded-xl px-4 py-2 text-center">
+              <div class="text-xs text-ink-muted font-semibold">النتيجة الحالية</div>
+              <div id="quiz-score-badge" class="text-lg font-extrabold text-azhar-dark">0 / 15</div>
+            </div>
+            <button id="btn-retry-quiz" type="button" class="px-4 py-2.5 bg-azhar hover:bg-azhar-dark text-parchment-card rounded-xl text-sm font-semibold transition cursor-pointer">
+              إعادة الاختبار
+            </button>
+          </div>
+        </div>
+
+        <!-- Quiz Questions Container -->
+        <div id="quiz-container" class="space-y-5"></div>
+
+        <!-- Final Quiz Result Box -->
+        <div id="quiz-final-box" class="hidden mt-7 bg-azhar text-parchment-card rounded-2xl p-6 text-center border-2 border-gold-soft">
+          <div id="quiz-final-emoji" class="text-4xl mb-2">🎓</div>
+          <h3 id="quiz-final-title" class="font-amiri text-2xl sm:text-3xl font-bold mb-1"></h3>
+          <p id="quiz-final-msg" class="text-parchment-dark/90 text-sm sm:text-base mb-4"></p>
+          <button id="btn-retry-quiz-bottom" type="button" class="px-5 py-2.5 bg-gold-soft hover:bg-gold text-ink font-bold rounded-xl text-sm transition cursor-pointer">
+            ابدأ الاختبار من جديد
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-parchment-dark border-t border-parchment-border py-6 mt-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center text-xs sm:text-sm text-ink-muted space-y-1.5">
+      <p class="font-semibold text-azhar-dark">منصة شرح ألفية ابن مالك — الصف الأول الثانوي الأزهري (الترم الأول ٢٠٢٦ – ٢٠٢٧)</p>
+      <p>مُعد وفق المنهج المقرر (شرح ابن عقيل) من باب الكلام وما يتألف منه حتى نهاية باب الابتداء (المبتدأ والخبر).</p>
+    </div>
+  </footer>
+
+  <!-- ==================== SCROLL TO TOP BUTTON ==================== -->
+  <button id="btn-scroll-top" type="button" title="العودة للأعلى" class="hidden fixed bottom-5 left-5 z-40 w-11 h-11 rounded-full bg-azhar hover:bg-azhar-dark text-parchment-card border-2 border-gold-soft shadow-lg flex items-center justify-center transition cursor-pointer">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <!-- ==================== TOAST NOTIFICATION ==================== -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 hidden bg-azhar-dark text-parchment-card border border-gold-soft px-4 py-2.5 rounded-xl shadow-lg text-sm font-semibold transition-all"></div>
+
+  <!-- ==================== CUSTOM CONFIRMATION MODAL (No alert/confirm) ==================== -->
+  <div id="reset-modal" class="hidden fixed inset-0 z-50 bg-ink/50 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-parchment-card border-2 border-gold-soft rounded-2xl max-w-md w-full p-6 shadow-2xl">
+      <h3 class="font-amiri text-2xl font-bold text-azhar-dark mb-2">تأكيد إعادة ضبط التقدم</h3>
+      <p class="text-sm text-ink-muted leading-relaxed mb-5">
+        هل تريد مسح جميع علامات «أتممت فهم البيت» والبدء في المذاكرة من جديد؟ لن يؤثر ذلك على الأبيات أو الشرح.
+      </p>
+      <div class="flex items-center justify-end gap-2.5">
+        <button id="btn-cancel-reset" type="button" class="px-4 py-2 rounded-xl text-sm font-semibold bg-parchment-dark hover:bg-parchment-border text-ink transition cursor-pointer">
+          إلغاء
+        </button>
+        <button id="btn-confirm-reset" type="button" class="px-4 py-2 rounded-xl text-sm font-semibold bg-red-700 hover:bg-red-800 text-white transition cursor-pointer">
+          نعم، أعد الضبط
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== APPLICATION SCRIPT ==================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* =========================================================================
+       * 1. CURRICULUM DATA (65 Verses across 4 Chapters — 1st Year Secondary Azhar)
+       * ========================================================================= */
+      const CHAPTERS = [
+        {
+          id: 'kalam',
+          shortTitle: '١. الكلام وما يتألف منه',
+          title: 'بابُ الكَلامِ وَمَا يَتَأَلَّفُ مِنْهُ',
+          badge: 'الباب الأول • ٧ أبيات كاملة',
+          description: 'يتناول تعريف الكلام والكلم والكلمة والقول عند النحاة، وأقسام الكلمة وعلامات كل من الاسم والفعل والحرف.',
+          verses: [
+            {
+              id: 'k1',
+              num: 1,
+              subtopic: 'تعريف الكلام وأقسام الكلم',
+              s1: 'كَلَامُنَا لَفْظٌ مُفِيدٌ كَاسْتَقِمْ',
+              s2: 'وَاسْمٌ وَفِعْلٌ ثُمَّ حَرْفٌ الْكَلِمْ',
+              explanation: 'يعرّف ابن مالك الكلام في اصطلاح النحاة بأنه: اللفظ المفيد فائدة يحسن السكوت عليها؛ فيخرج غير اللفظ (كالإشارة والكتابة)، ويخرج اللفظ المهمل (مثل ديز)، ويخرج اللفظ غير المفيد فائدة تامة (مثل: إن قام زيد). ثم بيّن أن «الكَلِم» اسم جنس جمعي يتألف من ثلاث كلمات فأكثر، سواء أفاد أم لم يفد، وأنواع الكلمة ثلاثة: اسم وفعل وحرف.',
+              example: '«اسْتَقِمْ»: كلام تام لأنه مركب من فعل أمر وفاعل مستتر تقديره (أنت)، أما «إن قام زيدٌ» فكَلِم وليس كلاماً لعدم تمام الفائدة.',
+              examTip: 'سؤال متكرر: فرّق بين الكلام والكَلِم مع التمثيل لما يجتمعان فيه (قد قام زيدٌ) ولما ينفرد به أحدهما.'
+            },
+            {
+              id: 'k2',
+              num: 2,
+              subtopic: 'الكلمة والقول وإطلاق الكلمة على الكلام',
+              s1: 'وَاحِدُهُ كَلِمَةٌ وَالْقَوْلُ عَمْ',
+              s2: 'وَكِلْمَةٌ بِهَا كَلَامٌ قَدْ يُؤَمْ',
+              explanation: 'مفرد الكَلِم هو «كلمة»، وهي اللفظ الموضوع لمعنى مفرد. أما «القول» فيعم الجميع؛ فيُطلق على الكلام والكَلِم والكلمة. وقد تُطلق «الكلمة» ويُراد بها الكلام الكثير مجازاً، كما في قولهم: كلمة التوحيد، وكلمة الإخلاص.',
+              example: 'قوله تعالى: ﴿كَلَّا إِنَّهَا كَلِمَةٌ هُوَ قَائِلُهَا﴾ إشارة إلى جملة «رب ارجعون»، وقولنا: ألقى الإمام كلمة مؤثرة.',
+              examTip: 'يُطلب في الامتحان الاستشهاد على إطلاق الكلمة وإرادة الكلام الكثير مع بيان الشاهد من الألفية.'
+            },
+            {
+              id: 'k3',
+              num: 3,
+              subtopic: 'علامات الاسم',
+              s1: 'بِالْجَرِّ وَالتَّنْوِينِ وَالنِّدَا وَأَلْ',
+              s2: 'وَمُسْنَدٍ لِلِاسْمِ تَمْيِيزٌ حَصَلْ',
+              explanation: 'يمتاز الاسم عن الفعل والحرف بخمس علامات: (١) الجر: سواء بالحرف أو بالإضافة أو بالتبعية. (٢) التنوين: بأنواعه الأربعة الخاصة بالاسم (التمكين، التنكير، المقابلة، العوض). (٣) النداء. (٤) دخول «أل» المعرفة. (٥) الإسناد إليه (الإخبار عنه)، وهي أنفع علامة؛ لأنها تثبت اسمية ما لا يقبل غيرها كالضمائر.',
+              example: '«بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ» (الجر)، «جاء محمدٌ» (التنوين)، «يا خالدُ» (النداء)، «العلمُ نورٌ» (أل)، «أنا مجتهدٌ» (الإسناد إلى الضمير).',
+              examTip: 'انتبه: عبّر ابن مالك بالجر ولم يقل بحرف الجر ليشمل الجر بالحرف والإضافة والتبعية (مررت بغلامِ زيدٍ الفاضلِ).'
+            },
+            {
+              id: 'k4',
+              num: 4,
+              subtopic: 'علامات الفعل',
+              s1: 'بِتَا فَعَلْتَ وَأَتَتْ وَيَا افْعَلِي',
+              s2: 'وَنُونِ أَقْبِلَنَّ فِعْلٌ يَنْجَلِي',
+              explanation: 'ينجلي الفعل ويتميز عن الاسم والحرف بأربع علامات: (١) تاء الفاعل المتحركة للمتكلم أو المخاطب أو المخاطبة نحو: فَعَلْتُ وفَعَلْتَ وفَعَلْتِ. (٢) تاء التأنيث الساكنة نحو: أَتَتْ وقامتْ. (٣) ياء الفاعلة (المخاطبة) التي تلحق الأمر والمضارع نحو: افعلي وتفعلين. (٤) نون التوكيد الثقيلة أو الخفيفة نحو: أَقْبِلَنَّ وَلَنَسْفَعَنْ.',
+              example: '«كتبتُ الدرسَ»، «نجحتْ فاطمةُ»، «اجتهدي في دروسكِ»، «لأجتهدنَّ في طلب العلم».',
+              examTip: 'سؤال أزهري شهير: لمَ قال ابن مالك «يا افعلي» ولم يقل «ياء الضمير»؟ لأن ياء الضمير تدخل على الاسم (غلامي) والحرف (إليَّ)، بخلاف ياء المخاطبة فتختص بالفعل.'
+            },
+            {
+              id: 'k5',
+              num: 5,
+              subtopic: 'الحرف وعلامة الفعل المضارع',
+              s1: 'سِوَاهُمَا الْحَرْفُ كَهَلْ وَفِي وَلَمْ',
+              s2: 'فِعْلٌ مُضَارِعٌ يَلِي لَمْ كَيَشَمْ',
+              explanation: 'الحرف ما لا يقبل شيئاً من علامات الاسم ولا علامات الفعل، وينقسم إلى: مشترك بين الأسماء والأفعال مثل (هل)، ومختص بالأسماء مثل (في)، ومختص بالأفعال مثل (لم). ثم شرع في تمييز أقسام الفعل؛ فعلامة الفعل المضارع قبوله دخول «لم» عليه.',
+              example: '«هل زيدٌ قائمٌ؟ / هل قام زيدٌ؟»، «الطالبُ في المعهدِ»، «لم يشمَّ / لم يهملِ المجتهدُ».',
+              examTip: 'احفظ تقسيم الحروف الثلاثة بأمثلة ابن مالك نفسها (هل: مشترك، في: مختص بالأسماء، لم: مختص بالأفعال).'
+            },
+            {
+              id: 'k6',
+              num: 6,
+              subtopic: 'علامتا الفعل الماضي وفعل الأمر',
+              s1: 'وَمَاضِيَ الْأَفْعَالِ بِالتَّا مِزْ وَسِمْ',
+              s2: 'بِالنُّونِ فِعْلَ الْأَمْرِ إِنْ أَمْرٌ فُهِمْ',
+              explanation: 'يتميز الفعل الماضي بقبوله التاء (تاء الفاعل وتاء التأنيث الساكنة)، ويُستدل بذلك على فعلية «نِعْمَ وبِئْسَ وعَسَى ولَيْسَ». أما فعل الأمر فعلامته مركبة من أمرين معاً: دلالته على الطلب (الأمر) بصيغته، وقبوله نون التوكيد.',
+              example: 'الماضي: «نعمتِ المرأةُ هندٌ»، «لستُ مهملاً». الأمر: «اكتبنَّ الواجبَ» (دل على الطلب وقبل النون).',
+              examTip: 'تذكر أن علامة فعل الأمر مركبة؛ فالمضارع يقبل النون ولا يدل على الأمر بنفسه، واسم فعل الأمر يدل على الأمر ولا يقبل النون.'
+            },
+            {
+              id: 'k7',
+              num: 7,
+              subtopic: 'اسم فعل الأمر',
+              s1: 'وَالْأَمْرُ إِنْ لَمْ يَكُ لِلنُّونِ مَحَلْ',
+              s2: 'فِيهِ هُوَ اسْمٌ نَحْوُ صَهْ وَحَيَّهَلْ',
+              explanation: 'إذا دلّت الكلمة على الأمر (الطلب) ولكنها لم تقبل نون التوكيد فهي «اسم فعل أمر» وليست فعل أمر، مثل «صَهْ» بمعنى اسكت، و«حَيَّهَلْ» بمعنى أقبلْ؛ فلا يصح أن تقول: صَهِنَّ ولا حَيَّهَلَنَّ.',
+              example: '«صَهْ عند تلاوة القرآنِ»، «حَيَّهَلْ على الصلاةِ» (اسما فعل أمر مبنيان).',
+              examTip: 'سؤال متكرر: ما نوع (صَهْ) و(حَيَّهَلْ)؟ ولماذا لم يُعدّا من أفعال الأمر؟'
+            }
+          ]
+        },
+        {
+          id: 'murab',
+          shortTitle: '٢. المعرب والمبني',
+          title: 'بابُ الْمُعْرَبِ وَالْمَبْنِيِّ',
+          badge: 'الباب الثاني • ٢٣ بيتاً من صلب المنهج',
+          description: 'يشرح أسباب بناء الاسم، والمبني والمعرب من الأفعال والحروف، وعلامات الإعراب الأصلية والفرعية (الأسماء الستة، المثنى، الجمعين، الممنوع من الصرف، الأفعال الخمسة، والمعتل).',
+          verses: [
+            {
+              id: 'm1',
+              num: 1,
+              subtopic: 'أقسام الاسم وسبب البناء',
+              s1: 'وَالِاسْمُ مِنْهُ مُعْرَبٌ وَمَبْنِي',
+              s2: 'لِشَبَهٍ مِنَ الْحُرُوفِ مُدْنِي',
+              explanation: 'الأصل في الأسماء الإعراب، ولا يُبنى منها إلا ما أشبه الحرف شبهاً قوياً يُقربه منه (مُدْنِي). فالإعراب هو تغير آخر الكلمة باختلاف العوامل، والبناء لزوم آخر الكلمة حالة واحدة لغير عامل ولا اعتلال.',
+              example: 'المعرب: «جاء زيدٌ، رأيتُ زيداً، مررتُ بزيدٍ». المبني: «هؤلاءِ طلابٌ، رأيتُ هؤلاءِ، مررتُ بهؤلاءِ».',
+              examTip: 'سؤال أساسي: ما علة بناء الاسم عند ابن مالك؟ الجواب: شبهه بالحرف شبهاً مُدنياً (قوياً).'
+            },
+            {
+              id: 'm2',
+              num: 2,
+              subtopic: 'أنواع شبه الاسم بالحرف',
+              s1: 'كَالشَّبَهِ الْوَضْعِيِّ فِي اسْمَيْ جِئْتَنَا',
+              s2: 'وَالْمَعْنَوِيِّ فِي مَتَى وَفِي هُنَا',
+              explanation: 'بيّن ابن مالك أربعة أوجه لشبه الاسم بالحرف، وذكر هنا اثنين منها: (١) الشبه الوضعي: أن يوضع الاسم على حرف واحد أو حرفين كالحروف، مثل التاء و«نا» في «جئْتَنَا». (٢) الشبه المعنوي: أن يتضمن الاسم معنى حرف موجود (مثل «متى» للاستفهام والشرط فتشبه الهمزة و«إن») أو حرف غير موجود وكان حقه أن يُوضع (مثل «هنا» للإشارة). ويضاف إليهما: الشبه الاستعمالي (أسماء الأفعال)، والشبه الافتقاري (الموصولات).',
+              example: 'الوضعي: «تاء الفاعل ونا في جئتنا». المعنوي: «متى السفرُ؟» و«هنا المعهدُ».',
+              examTip: 'يأتي في الامتحان سؤال: بيّن وجه الشبه بالحرف في كل من: التاء في (جئتنا) – متى – هنا – هيهات – الذي.'
+            },
+            {
+              id: 'm3',
+              num: 3,
+              subtopic: 'المعرب من الأسماء وقسماه',
+              s1: 'وَمُعْرَبُ الْأَسْمَاءِ مَا قَدْ سَلِمَا',
+              s2: 'مِنْ شَبَهِ الْحَرْفِ كَأَرْضٍ وَسُمَا',
+              explanation: 'المعرب من الأسماء هو كل اسم سلم من شبه الحرف، وينقسم إلى قسمين: صحيح الآخر مثل «أرضٍ» (تظهر عليه الحركات)، ومعتل الآخر مثل «سُمَا» (لغة في اسم، وتُقدر عليه الحركات للتعذر). كما ينقسم المعرب إلى منصرف (أمكن) وغير منصرف (غير أمكن).',
+              example: '«الأرضُ واسعةٌ» (صحيح معرب)، «هذا فتىً مجتهدٌ» (معتل معرب).',
+              examTip: 'نبّه الشراح أن «سُما» بضم السين وكسرها من لغات «اسم» وقد مثّل به للمعتل الآخر.'
+            },
+            {
+              id: 'm4',
+              num: 4,
+              subtopic: 'المبني والمعرب من الأفعال',
+              s1: 'وَفِعْلُ أَمْرٍ وَمُضِيٍّ بُنِيَا',
+              s2: 'وَأَعْرَبُوا مُضَارِعًا إِنْ عَرِيَا',
+              explanation: 'الأصل في الأفعال البناء؛ فالفعل الماضي مبني اتفاقاً (على الفتح، والضم، والسكون)، وفعل الأمر مبني عند البصريين (على ما يُجزم به مضارعه). أما الفعل المضارع فيُعرب لمشابهته اسم الفاعل، بشرط أن يخلو (يعرى) من النونين المذكورتين في البيت التالي.',
+              example: 'الماضي: «كَتَبَ»، الأمر: «اكْتُبْ»، المضارع المعرب: «يَكْتُبُ، لن يَكْتُبَ، لم يَكْتُبْ».',
+              examTip: 'تذكر الخلاف المشهور: فعل الأمر مبني عند البصريين، ومعرب مجزوم بلام أمر مقدرة عند الكوفيين.'
+            },
+            {
+              id: 'm5',
+              num: 5,
+              subtopic: 'شرط إعراب المضارع وحالتا بنائه',
+              s1: 'مِنْ نُونِ تَوْكِيدٍ مُبَاشِرٍ وَمِنْ',
+              s2: 'نُونِ إِنَاثٍ كَيَرُعْنَ مَنْ فُتِنْ',
+              explanation: 'يُبنى الفعل المضارع في حالتين فقط: (١) إذا اتصلت به نون التوكيد اتصالاً مباشراً فيُبنى على الفتح نحو: «لَيَسْجُنَنَّ»، أما إذا فصل بينهما فاصل (ألف الاثنين أو واو الجماعة أو ياء المخاطبة) فيبقى معرباً نحو: «هل تَضْرِبَانِّ». (٢) إذا اتصلت به نون النسوة فيُبنى على السكون نحو: «يَرُعْنَ» و«وَالْوَالِدَاتُ يُرْضِعْنَ».',
+              example: 'مبني على الفتح: «واللهِ لأجتهدنَّ». معرب مع النون غير المباشرة: «لتُبْلَوُنَّ». مبني على السكون: «الطالباتُ يكتبنَ».',
+              examTip: 'سؤال مهم جداً: لماذا أعرب الفعل في (هل تكتبانِّ / لتبلونَّ) رغم اتصاله بنون التوكيد؟ لوجود فاصل يمنع المباشرة.'
+            },
+            {
+              id: 'm6',
+              num: 6,
+              subtopic: 'بناء الحروف وأصل البناء',
+              s1: 'وَكُلُّ حَرْفٍ مُسْتَحِقٌّ لِلْبِنَا',
+              s2: 'وَالْأَصْلُ فِي الْمَبْنِيِّ أَنْ يُسَكَّنَا',
+              explanation: 'الحروف كلها مبنية لا حظّ لها في الإعراب؛ لأنها لا تتعاقب عليها المعاني المفتقرة للإعراب. والأصل في كل مبني (اسماً أو فعلاً أو حرفاً) أن يُبنى على السكون لأنه أخف من الحركة، ولا يُحرك إلا لسبب كالتخلص من التقاء الساكنين (مثل: أينَ، أمسِ، حيثُ).',
+              example: '«مِنْ، هَلْ، لَمْ» (مبنية على السكون على الأصل)، «أينَ، حيثُ، أمسِ» (مبنية على حركة لسبب).',
+              examTip: 'علل: الأصل في البناء السكون؟ لأنه أخف الحالات وأبعدها عن الثقل.'
+            },
+            {
+              id: 'm7',
+              num: 7,
+              subtopic: 'أنواع الإعراب المشتركة',
+              s1: 'وَالرَّفْعَ وَالنَّصْبَ اجْعَلَنْ إِعْرَابَا',
+              s2: 'لِاسْمٍ وَفِعْلٍ نَحْوُ لَنْ أَهَابَا',
+              explanation: 'أنواع الإعراب أربعة: الرفع، والنصب، والجر، والجزم. ويشترك الاسم والفعل المضارع في نوعين منها هما: الرفع والنصب.',
+              example: 'الرفع: «زيدٌ يقومُ». النصب: «إنّ زيداً لن يهابَ».',
+              examTip: 'انتبه لأنواع الإعراب الأربعة: اثنان مشتركان (الرفع والنصب) واثنان مختصان (الجر والجزم).'
+            },
+            {
+              id: 'm8',
+              num: 8,
+              subtopic: 'اختصاص الاسم بالجر والفعل بالجزم',
+              s1: 'وَالِاسْمُ قَدْ خُصِّصَ بِالْجَرِّ كَمَا',
+              s2: 'قَدْ خُصِّصَ الْفِعْلُ بِأَنْ يَنْجَزِمَا',
+              explanation: 'يختص الاسم بالجر فلا يُجرّ الفعل أبداً، ويختص الفعل المضارع بالجزم فلا يُجزم الاسم أبداً.',
+              example: 'الجر للاسم: «مررتُ بزيدٍ». الجزم للفعل: «لم يقصرِ الطالبُ».',
+              examTip: 'سؤال صح وخطأ متكرر: يشترك الاسم والفعل في الرفع والنصب والجر (خطأ؛ الجر مختص بالاسم).'
+            },
+            {
+              id: 'm9',
+              num: 9,
+              subtopic: 'علامات الإعراب الأصلية',
+              s1: 'فَارْفَعْ بِضَمٍّ وَانْصِبَنْ فَتْحًا وَجُرْ',
+              s2: 'كَسْرًا كَذِكْرُ اللَّهِ عَبْدَهُ يَسُرْ',
+              explanation: 'علامات الإعراب الأصلية هي: الضمة للرفع، والفتحة للنصب، والكسرة للجر، والسكون للجزم (في البيت التالي). وجمع ابن مالك أمثلة الرفع والنصب والجر في جملة بديعة واحدة: «ذِكْرُ اللَّهِ عَبْدَهُ يَسُرْ».',
+              example: '«ذِكْرُ» مرفوع بالضمة، «اللَّهِ» مجرور بالكسرة، «عَبْدَهُ» منصوب بالفتحة، «يَسُرْ» مرفوع بضمة مقدرة (سُكّن للوقف).',
+              examTip: 'أعرب مثال ابن مالك «ذكرُ اللهِ عبدَه يسرّ»؛ فهو من أشهر أسئلة الإعراب في الصف الأول الثانوي.'
+            },
+            {
+              id: 'm10',
+              num: 10,
+              subtopic: 'الجزم بالسكون والنيابة في الإعراب',
+              s1: 'وَاجْزِمْ بِتَسْكِينٍ وَغَيْرُ مَا ذُكِرْ',
+              s2: 'يَنُوبُ نَحْوُ جَا أَخُو بَنِي نَمِرْ',
+              explanation: 'علامة الجزم الأصلية هي السكون. وما عدا هذه العلامات الأصلية الأربع يُسمى علامات فرعية تنوب عنها في سبعة أبواب (الأسماء الستة، المثنى، جمع المذكر، جمع المؤنث، الممنوع من الصرف، الأفعال الخمسة، والمضارع المعتل). ومثّل بثلاثة منها في «جا أخو بني نمر».',
+              example: '«أخو»: مرفوع بالواو (أسماء ستة)، «بني»: مجرور بالياء (ملحق بجمع المذكر السالم).',
+              examTip: 'اذكر أبواب النيابة السبعة مع التمثيل؛ فهي هيكل الجزء الأكبر من باب المعرب والمبني.'
+            },
+            {
+              id: 'm11',
+              num: 11,
+              subtopic: 'إعراب الأسماء الستة',
+              s1: 'وَارْفَعْ بِوَاوٍ وَانْصِبَنَّ بِالْأَلِفْ',
+              s2: 'وَاجْرُرْ بِيَاءٍ مَا مِنَ الْأَسْمَا أَصِفْ',
+              explanation: 'أول أبواب النيابة: الأسماء الستة (أب، أخ، حم، هن، فو، ذو). تُرفع بالواو نيابة عن الضمة، وتُنصب بالألف نيابة عن الفتحة، وتُجر بالياء نيابة عن الكسرة، بشروط أربعة عامة: أن تكون مفردة، مكبرة، مضافة، وإضافتها لغير ياء المتكلم.',
+              example: '«جاء أبوكَ، ورأيتُ أباكَ، وسلمتُ على أبيكَ».',
+              examTip: 'تذكر الشروط العامة الأربعة؛ فإن ثُنّيت أو جُمعت أو صُغّرت أو أضيفت لياء المتكلم (أبي) لم تُعرب بالحروف.'
+            },
+            {
+              id: 'm12',
+              num: 12,
+              subtopic: 'الشرط الخاص بـ (ذو) و(فم)',
+              s1: 'مِنْ ذَاكَ ذُو إِنْ صُحْبَةً أَبَانَا',
+              s2: 'وَالْفَمُ حَيْثُ الْمِيمُ مِنْهُ بَانَا',
+              explanation: 'تختص «ذو» بشرطين زائدين: أن تكون بمعنى «صاحب» (فتخرج ذو الطائية الموصولة المبنية)، وأن تُضاف إلى اسم جنس ظاهر غير صفة. وتختص «فو» بشرط واحد وهو: خلوّها من الميم (بَانَا = انفصل)؛ فإن بقيت الميم أُعربت بالحركات الأصلية (هذا فمٌ).',
+              example: '«جاء ذو علمٍ»، «ينطقُ فوكَ بالحقِّ»، وبالميم: «نظّفْ فمَكَ».',
+              examTip: 'سؤال أزهري متكرر: فرّق في الإعراب بين «جاء ذو مالٍ» و«جاء ذو قامَ» (الأولى معربة بالواو والثانية موصولة مبنية).'
+            },
+            {
+              id: 'm13',
+              num: 13,
+              subtopic: 'بقية الأسماء الستة ولغات (أب وأخ وحم وهن)',
+              s1: 'أَبٌ أَخٌ حَمٌ كَذَاكَ وَهَنُ',
+              s2: 'وَالنَّقْصُ فِي هَذَا الْأَخِيرِ أَحْسَنُ',
+              explanation: 'بقية الأسماء الستة هي: أب، وأخ، وحم، وهن. وفي «هن» لغتان: النقص (إعرابه بالحركات الظاهرة على النون: هذا هنُكَ) وهو الأحسن والأفصح، والإتمام بالحروف (هذا هنوكَ) وهو قليل. أما (أب وأخ وحم) فالأشهر فيها الإتمام، ويليها القصر (بالألف دائماً)، ثم النقص.',
+              example: 'النقص في هن: «هذا هنُكَ»، والإتمام في أب: «جاء أبوكَ»، والقصر: «إن أباها وأبا أباها».',
+              examTip: 'احفظ اللغات الثلاث في (أب وأخ وحم): الإتمام (الأشهر)، القصر، النقص؛ واللغتين في (هن): النقص (الأحسن) والإتمام.'
+            },
+            {
+              id: 'm14',
+              num: 14,
+              subtopic: 'إعراب المثنى وملحقاته (كلا)',
+              s1: 'بِالْأَلِفِ ارْفَعِ الْمُثَنَّى وَكِلَا',
+              s2: 'إِذَا بِمُضْمَرٍ مُضَافًا وُصِلَا',
+              explanation: 'ثاني أبواب النيابة: المثنى؛ يُرفع بالألف نيابة عن الضمة، ويُنصب ويُجر بالياء المفتوح ما قبلها المكسور ما بعدها. ويُلحق به «كلا» بشرط إضافتها إلى ضمير (كلاهما، كليهما)، فإن أضيفت إلى اسم ظاهر أُعربت بحركات مقدرة على الألف كالمقصور.',
+              example: '«نجح الطالبانِ كلاهما»، «أكرمتُ الطالبينِ كليهما»، ومع الظاهر: «جاء كلا الطالبينِ» (مرفوع بضمة مقدرة).',
+              examTip: 'من أشهر أسئلة الامتحان: أعرب «كلا» في الجملتين: «حضر الطالبان كلاهما» و«حضر كلا الطالبين».'
+            },
+            {
+              id: 'm15',
+              num: 15,
+              subtopic: 'بقية ملحقات المثنى (كلتا واثنان واثنتان)',
+              s1: 'كِلْتَا كَذَاكَ اثْنَانِ وَاثْنَتَانِ',
+              s2: 'كَابْنَيْنِ وَابْنَتَيْنِ يَجْرِيَانِ',
+              explanation: 'مثل «كلا» في الشرط والإعراب «كلتا» للمؤنث. أما «اثنان واثنتان» فيُلحقان بالمثنى مطلقاً بلا شرط (سواء أُفردا أم رُكّبا مع العشرة أم أُضيفا لظاهر أو ضمير)؛ لأنهما لا مفرد لهما من لفظهما.',
+              example: '«قرأتُ اثني عشرَ كتاباً»، «تفوقتِ الطالبتانِ كلتاهما».',
+              examTip: 'فرّق بين شرط إلحاق (كلا وكلتا) وبين (اثنان واثنتان) اللذين يُلحقان بلا شرط.'
+            },
+            {
+              id: 'm16',
+              num: 16,
+              subtopic: 'إعراب جمع المذكر السالم وشروطه',
+              s1: 'وَارْفَعْ بِوَاوٍ وَبِيَا اجْرُرْ وَانْصِبِ',
+              s2: 'سَالِمَ جَمْعِ عَامِرٍ وَمُذْنِبِ',
+              explanation: 'ثالث أبواب النيابة: جمع المذكر السالم؛ يُرفع بالواو، ويُنصب ويُجر بالياء المكسور ما قبلها المفتوح ما بعدها. وأشار ابن مالك بـ «عامر» إلى شروط العلم (مذكر عاقل خالٍ من التاء والتركيب)، وبـ «مذنب» إلى شروط الصفة (لمذكر عاقل خالية من التاء، ليست من باب أفعل فعلاء ولا فعلان فعلى ولا مما يستوي فيه المذكر والمؤنث).',
+              example: '«أفلحَ المؤمنونَ»، «أحبُّ الصادقينَ»، «سلّمتُ على المجتهدينَ».',
+              examTip: 'انتبه لسبب اختيار ابن مالك لـ (عامر ومذنب): لبيان أن ما يُجمع هذا الجمع نوعان فقط: الجامد العَلَم، والصفة.'
+            },
+            {
+              id: 'm17',
+              num: 17,
+              subtopic: 'ملحقات جمع المذكر السالم',
+              s1: 'وَشِبْهِ ذَيْنِ وَبِهِ عِشْرُونَا',
+              s2: 'وَبَابُهُ أُلْحِقَ وَالْأَهْلُونَا',
+              explanation: 'يُلحق بجمع المذكر السالم في إعرابه ألفاظ فقدت بعض شروطه، منها: ألفاظ العقود (عشرون إلى تسعين) لأنها لا مفرد لها من لفظها، و«أهلون» لأن مفرده (أهل) ليس علماً ولا صفة، وكذلك: أُولو، عالَمون، عِلّيّون، أرَضون، وسِنون وبابه.',
+              example: '﴿الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ﴾، ﴿شَغَلَتْنَا أَمْوَالُنَا وَأَهْلُونَا﴾، «حفظتُ ثلاثينَ جزءاً».',
+              examTip: 'اذكر سبب إلحاق كل من: عشرون – أهلون – أُولو – سنون بجمع المذكر السالم.'
+            },
+            {
+              id: 'm18',
+              num: 18,
+              subtopic: 'إعراب جمع المؤنث السالم',
+              s1: 'وَمَا بِتَا وَأَلِفٍ قَدْ جُمِعَا',
+              s2: 'يُكْسَرُ فِي الْجَرِّ وَفِي النَّصْبِ مَعَا',
+              explanation: 'رابع أبواب النيابة: ما جُمع بألف وتاء مزيدتين (جمع المؤنث السالم)؛ يُرفع بالضمة (أصلية)، ويُجر بالكسرة (أصلية)، ويُنصب بالكسرة نيابة عن الفتحة (علامة فرعية). ويُلحق به «أولات» وما سُمّي به مثل «أذرعات» و«عرفات».',
+              example: '﴿خَلَقَ اللَّهُ السَّمَاوَاتِ وَالْأَرْضَ﴾، ﴿وَأُولَاتُ الْأَحْمَالِ﴾.',
+              examTip: 'سؤال دقيق: هل النيابة في جمع المؤنث السالم في النصب فقط أم في الرفع والجر أيضاً؟ في النصب فقط (الكسرة نيابة عن الفتحة).'
+            },
+            {
+              id: 'm19',
+              num: 19,
+              subtopic: 'إعراب الممنوع من الصرف',
+              s1: 'وَجُرَّ بِالْفَتْحَةِ مَا لَا يَنْصَرِفْ',
+              s2: 'مَا لَمْ يُضَفْ أَوْ يَكُ بَعْدَ أَلْ رَدِفْ',
+              explanation: 'خامس أبواب النيابة: الممنوع من الصرف (الاسم الذي لا يدخله التنوين لعلتين أو لعلة تقوم مقام علتين)؛ يُرفع بالضمة، ويُنصب بالفتحة، ويُجر بالفتحة نيابة عن الكسرة بشرطين: ألا يُضاف، وألا تقترن به «أل». فإن أُضيف أو دخلت عليه «أل» جُرّ بالكسرة على الأصل.',
+              example: 'مجرور بالفتحة: «صلّيتُ في مساجدَ كثيرةٍ». مجرور بالكسرة: «صلّيتُ في المساجدِ» أو «في مساجدِ القاهرةِ».',
+              examTip: 'سؤال مضمون في الامتحان: ضع كلمة (مساجد) أو (أفضل) في جملتين بحيث تكون مجرورة بالفتحة مرة وبالكسرة مرة.'
+            },
+            {
+              id: 'm20',
+              num: 20,
+              subtopic: 'الأفعال الخمسة وعلامة رفعها',
+              s1: 'وَاجْعَلْ لِنَحْوِ يَفْعَلَانِ النُّونَا',
+              s2: 'رَفْعًا وَتَدْعِينَ وَتَسْأَلُونَا',
+              explanation: 'سادس أبواب النيابة: الأفعال الخمسة (الأمثلة الخمسة)، وهي كل فعل مضارع اتصلت به ألف الاثنين (يفعلان، تفعلان)، أو واو الجماعة (يفعلون، تفعلون)، أو ياء المخاطبة (تفعلين). تُرفع بثبوت النون نيابة عن الضمة.',
+              example: '«الطالبانِ يجتهدانِ»، «المسلمونَ يصلّونَ»، «أنتِ تحفظينَ القرآنَ».',
+              examTip: 'عُدّت خمسة باعتبار الغيبة والخطاب مع الألف والواو (٢ + ٢)، والخطاب فقط مع الياء (١).'
+            },
+            {
+              id: 'm21',
+              num: 21,
+              subtopic: 'نصب وجزم الأفعال الخمسة',
+              s1: 'وَحَذْفُهَا لِلْجَزْمِ وَالنَّصْبِ سِمَهْ',
+              s2: 'كَلَمْ تَكُونِي لِتَرُومِي مَظْلَمَهْ',
+              explanation: 'تُنصب الأفعال الخمسة وتُجزم بحذف النون نيابة عن الفتحة والسكون. ومثّل ابن مالك للجزم والنصب معاً بـ «لم تكوني لترومي مظلمة»: فـ «تكوني» مجزوم بلم وعلامة جزمه حذف النون، و«ترومي» منصوب بلام الجحود (بأن مضمرة) وعلامة نصبه حذف النون.',
+              example: '﴿فَإِنْ لَمْ تَفْعَلُوا وَلَنْ تَفْعَلُوا﴾.',
+              examTip: 'الضمير المتصل بالأفعال الخمسة (الألف أو الواو أو الياء) يُعرب دائماً فاعلاً أو نائب فاعل أو اسم كان.'
+            },
+            {
+              id: 'm22',
+              num: 22,
+              subtopic: 'المعتل من الأسماء (المقصور والمنقوص)',
+              s1: 'وَسَمِّ مُعْتَلًّا مِنَ الْأَسْمَاءِ مَا',
+              s2: 'كَالْمُصْطَفَى وَالْمُرْتَقِي مَكَارِمَا',
+              explanation: 'الاسم المعتل نوعان: (١) المقصور (مثل المصطفى): آخره ألف لازمة، وتُقدر عليه جميع الحركات الثلاث للتعذر. (٢) المنقوص (مثل المرتقي): آخره ياء لازمة مكسور ما قبلها، وتُقدر عليه الضمة والكسرة للثقل، وتظهر عليه الفتحة لخفتها (رأيتُ المرتقيَ).',
+              example: 'المقصور: «جاء الفتى، رأيتُ الفتى، مررتُ بالفتى». المنقوص: «جاء القاضي، مررتُ بالقاضي، رأيتُ القاضيَ».',
+              examTip: 'تذكر الفرق: في المقصور التقدير للتعذر في الأحوال الثلاث، وفي المنقوص للثقل في الرفع والجر فقط وتظهر الفتحة نصباً.'
+            },
+            {
+              id: 'm23',
+              num: 23,
+              subtopic: 'المعتل من الأفعال وإعرابه',
+              s1: 'وَأَيُّ فِعْلٍ آخِرٌ مِنْهُ أَلِفْ',
+              s2: 'أَوْ وَاوٌ اوْ يَاءٌ فَمُعْتَلًّا عُرِفْ',
+              explanation: 'سابع أبواب النيابة: الفعل المضارع المعتل الآخر بالألف (يخشى) أو الواو (يدعو) أو الياء (يرمي). يُرفع بضمة مقدرة (تعذراً على الألف، وثقلاً على الواو والياء)، ويُنصب بفتحة مقدرة على الألف وظاهرة على الواو والياء، ويُجزم بحذف حرف العلة نيابة عن السكون.',
+              example: 'الرفع: «يدعو المؤمنُ ربَّه». النصب: «لن يدعوَ، لن يرميَ، لن يخشى». الجزم: «لم يدعُ، لم يرمِ، لم يخشَ».',
+              examTip: 'سؤال أزهري متكرر: متى تظهر الفتحة على المضارع المعتل ومتى تُقدر؟ تظهر مع الواو والياء وتُقدر مع الألف.'
+            }
+          ]
+        },
+        {
+          id: 'nakirah',
+          shortTitle: '٣. النكرة والمعرفة',
+          title: 'بابُ النَّكِرَةِ وَالْمَعْرِفَةِ',
+          badge: 'الباب الثالث • ١٤ بيتاً من صلب المنهج',
+          description: 'يتناول علامة النكرة، وأنواع المعارف الستة: الضمير، والعَلَم، واسم الإشارة، والاسم الموصول، والمعرّف بأداة التعريف، والمضاف إلى معرفة.',
+          verses: [
+            {
+              id: 'n1',
+              num: 1,
+              subtopic: 'تعريف النكرة وعلامتها',
+              s1: 'نَكِرَةٌ قَابِلُ أَلْ مُؤَثِّرَا',
+              s2: 'أَوْ وَاقِعٌ مَوْقِعَ مَا قَدْ ذُكِرَا',
+              explanation: 'النكرة نوعان: (١) ما يقبل دخول «أل» وتؤثر فيه التعريف مثل: رجل (الرجل)، كتاب (الكتاب)؛ فخرج بذلك ما يقبل «أل» غير مؤثرة كالعَلَم «عباس» (العباس). (٢) ما لا يقبل «أل» ولكنه يقع موقع ما يقبلها، مثل «ذو» بمعنى صاحب؛ فإنها بمعنى «صاحب» الذي يقبل «أل» (الصاحب).',
+              example: 'يقبل أل: «طالبٌ / الطالبُ». يقع موقع ما يقبل أل: «جاءني رجلٌ ذو علمٍ».',
+              examTip: 'علل: لمَ قيّد ابن مالك قبول «أل» بقوله «مؤثرا»؟ ليخرج الأعلام التي تدخلها «أل» للمح الأصل مثل: الحسن والعباس.'
+            },
+            {
+              id: 'n2',
+              num: 2,
+              subtopic: 'أنواع المعارف الستة',
+              s1: 'وَغَيْرُهُ مَعْرِفَةٌ كَهُمْ وَذِي',
+              s2: 'وَهِنْدَ وَابْنِي وَالْغُلَامِ وَالَّذِي',
+              explanation: 'ما عدا النكرة فهو معرفة، وأنواع المعارف ستة مثّل لها ابن مالك جميعاً في هذا البيت: (١) الضمير: «هم». (٢) اسم الإشارة: «ذي». (٣) العَلَم: «هند». (٤) المضاف إلى معرفة: «ابني». (٥) المعرف بأل: «الغلام». (٦) الاسم الموصول: «الذي».',
+              example: 'أعرف المعارف بعد لفظ الجلالة: الضمير، ثم العَلَم، ثم اسم الإشارة، ثم الموصول، ثم المعرّف بأل، والمضاف في رتبة ما أضيف إليه (إلا المضاف للضمير ففي رتبة العَلَم).',
+              examTip: 'احفظ أمثلة البيت الستة لأنها تجمع أنواع المعارف كلها في سطر واحد!'
+            },
+            {
+              id: 'n3',
+              num: 3,
+              subtopic: 'تعريف الضمير',
+              s1: 'فَمَا لِذِي غَيْبَةٍ اوْ حُضُورِ',
+              s2: 'كَأَنْتَ وَهُوَ سَمِّ بِالضَّمِيرِ',
+              explanation: 'الضمير اسم جامد يدل على غائب مثل (هو، هي، هما، هم، هن)، أو حاضر، والحاضر يشمل: المتكلم (أنا، نحن) والمخاطب (أنتَ، أنتِ، أنتما، أنتم، أنتنّ). وينقسم الضمير إلى بارز (متصل ومنفصل) ومستتر (وجوباً وجوازاً).',
+              example: 'المتكلم: «أنا أزهريٌّ». المخاطب: «أنتَ مجتهدٌ». الغائب: «هو حافظٌ للقرآنِ».',
+              examTip: 'انتبه: شمل قوله «حضور» نوعين معاً هما: المتكلم والمخاطب.'
+            },
+            {
+              id: 'n4',
+              num: 4,
+              subtopic: 'الضمير المتصل',
+              s1: 'وَذُو اتِّصَالٍ مِنْهُ مَا لَا يُبْتَدَا',
+              s2: 'وَلَا يَلِي إِلَّا اخْتِيَارًا أَبَدَا',
+              explanation: 'الضمير المتصل هو الذي لا يُبتدأ به الكلام، ولا يقع بعد «إلّا» في الاختيار (أي في سعة الكلام، وقد يقع شذوذاً في الشعر). مثل الياء والكاف في «أكرمتكَ وأكرمَني». وتنقسم المتصلة إلى: مختصة بالرفع، ومشتركة بين النصب والجر، ومشتركة بين الرفع والنصب والجر (وهي: نا).',
+              example: '«ربَّنا إنَّنا سمعْنا» (الضمير «نا» وقع هنا في محل جر، ثم نصب، ثم رفع!).',
+              examTip: 'سؤال شهير: مثل لضمير واحد يصلح للرفع والنصب والجر في آية أو جملة واحدة (مثال: ربَّنا إنَّنا سمعْنا).'
+            },
+            {
+              id: 'n5',
+              num: 5,
+              subtopic: 'ضمائر الرفع المنفصلة',
+              s1: 'وَذُو ارْتِفَاعٍ وَانْفِصَالٍ أَنَا هُو',
+              s2: 'وَأَنْتَ وَالْفُرُوعُ لَا تَشْتَبِهُ',
+              explanation: 'الضمير المنفصل هو الذي يصح الابتداء به ويقع بعد «إلّا» في الاختيار. وضمائر الرفع المنفصلة اثنا عشر ضميراً: للمتكلم (أنا، نحن)، وللمخاطب (أنتَ، أنتِ، أنتما، أنتم، أنتنّ)، وللغائب (هو، هي، هما، هم، هنّ).',
+              example: '«ما ناجحٌ إلّا أنتَ»، «نحنُ طلابُ العلمِ».',
+              examTip: 'لا يوجد في اللغة العربية ضمائر جر منفصلة؛ فالمتصل للرفع والنصب والجر، والمنفصل للرفع والنصب فقط.'
+            },
+            {
+              id: 'n6',
+              num: 6,
+              subtopic: 'ضمائر النصب المنفصلة',
+              s1: 'وَذُو انْتِصَابٍ فِي انْفِصَالٍ جُعِلَا',
+              s2: 'إِيَّايَ وَالتَّفْرِيعُ لَيْسَ مُشْكِلَا',
+              explanation: 'ضمائر النصب المنفصلة اثنا عشر ضميراً أيضاً، وهي «إيّا» مضافاً إليها لواحق تدل على المتكلم أو المخاطب أو الغائب: (إيّايَ، إيّانا، إيّاكَ، إيّاكِ، إيّاكما، إيّاكم، إيّاكنّ، إيّاهُ، إيّاها، إيّاهما، إيّاهم، إيّاهنّ).',
+              example: '﴿إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ﴾ (إيّاك: ضمير منفصل مبني في محل نصب مفعول به مقدم).',
+              examTip: 'تذكر المذهب الصحيح (مذهب سيبويه): أن «إيّا» هو الضمير وما بعده حروف دالة على التكلم أو الخطاب أو الغيبة.'
+            },
+            {
+              id: 'n7',
+              num: 7,
+              subtopic: 'تعريف العَلَم',
+              s1: 'اسْمٌ يُعَيِّنُ الْمُسَمَّى مُطْلَقَا',
+              s2: 'عَلَمُهُ كَجَعْفَرٍ وَخِرْنِقَا',
+              explanation: 'العَلَم هو الاسم الذي يعيّن مسمّاه تعييناً مطلقاً (بلا قيد تكلم أو خطاب أو غيبة أو إشارة أو صلة). ويدخل في العَلَم أعلام العقلاء مثل «جعفر» (رجل) و«خِرنق» (اسم شاعرة)، وأعلام غير العقلاء كالبلدان والقبائل والحيوانات.',
+              example: '«القاهرةُ عاصمةُ مصرَ»، «جعفرُ بنُ أبي طالبٍ صحابيٌّ جليلٌ».',
+              examTip: 'ما المراد بقوله «مطلقاً»؟ أي بلا قرينة لفظية (كأل والصلة) ولا معنوية (كالتكلم والخطاب والإشارة).'
+            },
+            {
+              id: 'n8',
+              num: 8,
+              subtopic: 'أقسام العَلَم: الاسم والكنية واللقب',
+              s1: 'وَاسْمًا أَتَى وَكُنْيَةً وَلَقَبَا',
+              s2: 'وَأَخِّرَنْ ذَا إِنْ سِوَاهُ صَحِبَا',
+              explanation: 'ينقسم العَلَم ثلاثة أقسام: (١) الكنية: ما صُدّر بأب أو أم مثل: أبو بكر، أم المؤمنين. (٢) اللقب: ما أشعر بمدح أو ذم مثل: الصدّيق، الفاروق، زين العابدين. (٣) الاسم: ما ليس كنية ولا لقباً مثل: محمد، عمر. وإذا اجتمع الاسم واللقب وجب تأخير اللقب وتقديم الاسم (نحو: عمرُ الفاروقُ)، ولا ترتيب بين الكنية وغيرها.',
+              example: '«جاء عمرُ الفاروقُ» (تأخر اللقب)، «أبو حفصٍ عمرُ» أو «عمرُ أبو حفصٍ» (جواز الترتيب مع الكنية).',
+              examTip: 'سؤال مهم: متى يجوز تقديم اللقب على الاسم؟ إذا كان اللقب أشهر من الاسم نحو: ﴿الْمَسِيحُ عِيسَى ابْنُ مَرْيَمَ﴾.'
+            },
+            {
+              id: 'n9',
+              num: 9,
+              subtopic: 'أسماء الإشارة للمفرد المذكر والمؤنث',
+              s1: 'بِذَا لِمُفْرَدٍ مُذَكَّرٍ أَشِرْ',
+              s2: 'بِذِي وَذِهْ تِي تَا عَلَى الْأُنْثَى اقْتَصِرْ',
+              explanation: 'يُشار للمفرد المذكر بلفظ «ذا» فقط (ويكثر دخول هاء التنبيه عليها: هذا). ويُشار للمفردة المؤنثة بألفاظ منها: ذي، ذِهْ (بسكون الهاء أو كسرها)، تي، تا، تِهْ (وهذه).',
+              example: '«هذا كتابٌ نافعٌ»، «هذه (ذي) طالبةٌ متفوقةٌ».',
+              examTip: 'ملاحظة: «الهاء» في (هذا / هذه) حرف تنبيه وليست من أصل اسم الإشارة.'
+            },
+            {
+              id: 'n10',
+              num: 10,
+              subtopic: 'أسماء الإشارة للمثنى وإعرابها',
+              s1: 'وَذَانِ تَانِ لِلْمُثَنَّى الْمُرْتَفِعْ',
+              s2: 'وَفِي سِوَاهُ ذَيْنِ تَيْنِ اذْكُرْ تُطِعْ',
+              explanation: 'يُشار للمثنى المذكر في حالة الرفع بـ «ذانِ» (هذانِ)، وفي حالتي النصب والجر بـ «ذينِ» (هذينِ). وللمثنى المؤنث في الرفع بـ «تانِ» (هاتانِ)، وفي النصب والجر بـ «تينِ» (هاتينِ). وهما معربان إعراب المثنى (أو مبنيان على ما يرفعان وينصبان به على قول). أما الجمع مطلقاً فيُشار إليه بـ «أولاءِ» (هؤلاءِ).',
+              example: '﴿هَذَانِ خَصْمَانِ﴾، ﴿إِنَّ هَاتَيْنِ﴾، «أكرمتُ هذينِ الطالبينِ».',
+              examTip: 'كل أسماء الإشارة مبنية إلا المثنى (هذان وهاتان) فيُعربان إعراب المثنى.'
+            },
+            {
+              id: 'n11',
+              num: 11,
+              subtopic: 'الاسم الموصول للمفرد والمثنى',
+              s1: 'مَوْصُولُ الْأَسْمَاءِ الَّذِي الْأُنْثَى الَّتِي',
+              s2: 'وَالْيَا إِذَا مَا ثُنِّيَا لَا تُثْبِتِ',
+              explanation: 'الاسم الموصول النصّ (المختص): «الذي» للمفرد المذكر، و«التي» للمفردة المؤنثة. وعند تثنيتهما تُحذف الياء ويُؤتى بالألف رفعاً (اللذانِ، اللتانِ) وبالياء نصباً وجراً (اللذينِ، اللتينِ). ولجمع المذكر العاقل «الذينَ»، ولجمع المؤنث «اللاتي واللائي». وهناك موصولات مشتركة أشهرها: «مَن» للعاقل و«ما» لغير العاقل.',
+              example: '«جاء الذي نجحَ»، «أكرمتُ اللذينِ تفوّقا»، «أحبُّ مَن يصدقُ».',
+              examTip: 'انتبه: تُكتب (الذي، التي، الذين) بلام واحدة، بينما تُكتب (اللذان، اللتان، اللاتي) بلامين.'
+            },
+            {
+              id: 'n12',
+              num: 12,
+              subtopic: 'صلة الموصول والعائد',
+              s1: 'وَكُلُّهَا يَلْزَمُ بَعْدَهُ صِلَهْ',
+              s2: 'عَلَى ضَمِيرٍ لَائِقٍ مُشْتَمِلَهْ',
+              explanation: 'كل اسم موصول لا يتم معناه إلا بجملة أو شبه جملة تأتي بعده تُسمى «صلة الموصول» (ولا محل لها من الإعراب). ويُشترط في الجملة أن تكون خبرية معروفة، وأن تشتمل على ضمير يعود على الموصول ويطابقه في الإفراد والتثنية والجمع والتذكير والتأنيث يُسمى «العائد».',
+              example: '«نجحَ الطالبُ الذي اجتهدَ (هو)»، «الطالباتُ اللاتي اجتهدْنَ متفوقاتٌ».',
+              examTip: 'سؤال متكرر: اذكر شروط جملة صلة الموصول، وبيّن العائد في الجملة.'
+            },
+            {
+              id: 'n13',
+              num: 13,
+              subtopic: 'المعرّف بأداة التعريف (أل)',
+              s1: 'أَلْ حَرْفُ تَعْرِيفٍ أَوِ اللَّامُ فَقَطْ',
+              s2: 'فَنَمَطٌ عَرَّفْتَ قُلْ فِيهِ النَّمَطْ',
+              explanation: 'اختلف النحاة في أداة التعريف: فمذهب الخليل أن الأداة هي «أل» بتمامها وهمزتها همزة قطع وُصلت لكثرة الاستعمال، ومذهب سيبويه أن الأداة هي «اللام فقط» والهمزة زائدة للوصل؛ فإذا أردت تعريف «نَمَط» قلتَ «النَّمَط». وتنقسم «أل» المعرفة إلى: عهدية (ذهني، ذكري، حضوري) وجنسية (لاستغراق الأفراد أو الخصائص أو لبيان الحقيقة).',
+              example: 'العهد الذكري: ﴿كَمَا أَرْسَلْنَا إِلَى فِرْعَوْنَ رَسُولًا فَعَصَى فِرْعَوْنُ الرَّسُولَ﴾. الاستغراق: ﴿إِنَّ الْإِنْسَانَ لَفِي خُسْرٍ﴾.',
+              examTip: 'اذكر مذهبي الخليل وسيبويه في أداة التعريف، وبيّن أنواع (أل) العهدية والجنسية.'
+            },
+            {
+              id: 'n14',
+              num: 14,
+              subtopic: 'أل الزائدة اللازمة',
+              s1: 'وَقَدْ تُزَادُ لَازِمًا كَاللَّاتِ',
+              s2: 'وَالْآنَ وَالَّذِينَ ثُمَّ اللَّاتِي',
+              explanation: 'تأتي «أل» أحياناً زائدة لا تفيد التعريف، وتنقسم إلى: (١) زائدة لازمة لا تفارق الكلمة مثل: اللات (اسم صنم)، والآنَ (ظرف زمان)، والذين واللاتي (الأسماء الموصولة). (٢) زائدة غير لازمة مثل الداخلة على الأعلام للمح الأصل (الفضل، الحارث، النعمان) أو للضرورة الشعرية.',
+              example: '«جئتُ الآنَ» (أل زائدة لازمة)، «الفضلُ بنُ العباسِ» (زائدة للمح الأصل).',
+              examTip: 'سؤال أزهري متكرر: ما نوع (أل) في كل من: الآنَ – الذين – الحارث – الكتاب؟'
+            }
+          ]
+        },
+        {
+          id: 'mubtada',
+          shortTitle: '٤. الابتداء (المبتدأ والخبر)',
+          title: 'بابُ الِابْتِدَاءِ (الْمُبْتَدَأُ وَالْخَبَرُ)',
+          badge: 'الباب الرابع • ٢١ بيتاً شاملة للباب',
+          description: 'شرح وافٍ ومفصّل لأحكام المبتدأ والخبر: قسما المبتدأ، العامل فيهما، أنواع الخبر والرابط، مسوغات الابتداء بالنكرة، التقديم والتأخير، الحذف جوازاً ووجوباً، وتعدد الخبر.',
+          verses: [
+            {
+              id: 'b1',
+              num: 1,
+              subtopic: 'أقسام المبتدأ (القسم الأول: مبتدأ له خبر)',
+              s1: 'مُبْتَدَأٌ زَيْدٌ وَعَاذِرٌ خَبَرْ',
+              s2: 'إِنْ قُلْتَ زَيْدٌ عَاذِرٌ مَنِ اعْتَذَرْ',
+              explanation: 'المبتدأ قسمان: (١) مبتدأ له خبر، وهو الأصل والغالب؛ مثل «زيدٌ عاذرٌ منِ اعتذرْ»: فـ «زيدٌ» مبتدأ مرفوع، و«عاذرٌ» خبره مرفوع. (٢) مبتدأ له فاعل سدّ مسدّ الخبر، وسيذكره في البيت التالي.',
+              example: '«العلمُ نافعٌ»، «الأزهرُ منارةُ العلمِ».',
+              examTip: 'تذكر تقسيم المبتدأ عند ابن مالك: مبتدأ له خبر، ومبتدأ له مرفوع أغنى عن الخبر.'
+            },
+            {
+              id: 'b2',
+              num: 2,
+              subtopic: 'القسم الثاني: الوصف المستغني بمرفوعه عن الخبر',
+              s1: 'وَأَوَّلٌ مُبْتَدَأٌ وَالثَّانِي',
+              s2: 'فَاعِلٌ اغْنَى فِي أَسَارٍ ذَانِ',
+              explanation: 'القسم الثاني من المبتدأ هو أن يكون المبتدأ وصفاً (اسم فاعل أو اسم مفعول أو صفة مشبهة) معتمداً على نفي أو استفهام، ويرفع فاعلاً أو نائب فاعل يغني عن الخبر (يسدّ مسدّه). مثاله: «أسارٍ ذانِ؟»؛ فالهمزة للاستفهام، و«سارٍ» مبتدأ، و«ذانِ» فاعل مرفوع بالألف سدّ مسدّ الخبر.',
+              example: '«أقائمٌ الزيدانِ؟»، «ما مضروبٌ العمرانِ» (العمران: نائب فاعل سدّ مسدّ الخبر).',
+              examTip: 'انتبه لحالات المطابقة: إن تطابقا في الإفراد جاز وجهان (أقائمٌ زيدٌ)، وإن تطابقا في التثنية والجمع تعين كونه خبراً مقدماً (أقائمانِ الزيدانِ)، وإن أفرد الوصف مع مثنى أو جمع تعين كونه مبتدأ وما بعده فاعل سدّ مسدّ الخبر (أقائمٌ الزيدانِ).'
+            },
+            {
+              id: 'b3',
+              num: 3,
+              subtopic: 'اعتماد الوصف على النفي ومذهب الأخفش والكوفيين',
+              s1: 'وَقِسْ وَكَاسْتِفْهَامٍ النَّفْيُ وَقَدْ',
+              s2: 'يَجُوزُ نَحْوُ فَائِزٌ أُولُو الرَّشَدْ',
+              explanation: 'كما يعتمد الوصف على الاستفهام (حرفاً كالهمزة أو اسماً كـ كيف) يعتمد كذلك على النفي (حرفاً كـ ما، أو اسماً كـ غير، أو فعلاً كـ ليس)، نحو: «ما قائمٌ الزيدانِ». ثم أشار بقوله «وقد يجوز» إلى مذهب الأخفش والكوفيين الذين أجازوا رفع الوصف للفاعل المغني عن الخبر دون اعتماد على نفي أو استفهام نحو: «فائزٌ أُولُو الرشدْ»، وهو قليل عند البصريين.',
+              example: 'اعتماد على نفي: «غيرُ قائمٍ الزيدانِ». دون اعتماد (عند الكوفيين): «فائزٌ أولو الرشدِ».',
+              examTip: 'سؤال أزهري مشهور: ما مذهب البصريين والكوفيين في جواز نحو «فائزٌ أولو الرشدِ»؟'
+            },
+            {
+              id: 'b4',
+              num: 4,
+              subtopic: 'العامل في المبتدأ والخبر',
+              s1: 'وَرَفَعُوا مُبْتَدَأً بِالِابْتِدَا',
+              s2: 'كَذَاكَ رَفْعُ خَبَرٍ بِالْمُبْتَدَا',
+              explanation: 'العامل الذي يرفع المبتدأ هو عامل معنوي يُسمى «الابتداء» (أي تجرّد الاسم عن العوامل اللفظية غير الزائدة للإسناد). أما العامل الذي يرفع الخبر فمذهب سيبويه والجمهور الذي اختاره ابن مالك أنه «المبتدأ» نفسه (عامل لفظي).',
+              example: '«الحقُّ واضحٌ»: الحقُّ مرفوع بالابتداء، وواضحٌ مرفوع بالمبتدأ.',
+              examTip: 'احفظ الخلاف في رافع الخبر: المبتدأ (مذهب سيبويه وابن مالك)، الابتداء وحده، الابتداء والمبتدأ معاً.'
+            },
+            {
+              id: 'b5',
+              num: 5,
+              subtopic: 'تعريف الخبر',
+              s1: 'وَالْخَبَرُ الْجُزْءُ الْمُتِمُّ الْفَائِدَهْ',
+              s2: 'كَاللَّهُ بَرٌّ وَالْأَيَادِي شَاهِدَهْ',
+              explanation: 'الخبر هو الجزء الذي يُتمّ الفائدة مع المبتدأ غير الوصف. مثل: «اللَّهُ بَرٌّ» و«الْأَيَادِي شَاهِدَهْ». وقوله «الجزء المتم الفائدة» يخرج به المضاف إليه والصفة، ويخرج فاعل الوصف لأنه ليس خبراً وإنما سدّ مسدّ الخبر.',
+              example: '«الصبرُ مفتاحُ الفرجِ»، «اللهُ رحيمٌ بعبادِهِ».',
+              examTip: 'سؤال: عرّف الخبر كما عرّفه ابن مالك، ولمَ لا يدخل في تعريفه الفاعل في «قام زيدٌ»؟ لأنه ليس مع مبتدأ.'
+            },
+            {
+              id: 'b6',
+              num: 6,
+              subtopic: 'أنواع الخبر والرابط في الخبر الجملة',
+              s1: 'وَمُفْرَدًا يَأْتِي وَيَأْتِي جُمْلَهْ',
+              s2: 'حَاوِيَةً مَعْنَى الَّذِي سِيقَتْ لَهْ',
+              explanation: 'يأتي الخبر مفرداً (ما ليس جملة ولا شبه جملة، وإن كان مثنى أو جمعاً)، ويأتي جملة (اسمية أو فعلية). وإذا وقع الخبر جملة فلا بد أن تشتمل على رابط يربطها بالمبتدأ، والروابط أربعة: (١) الضمير (وهو الأصل): زيدٌ أبوه قائمٌ. (٢) الإشارة: ﴿وَلِبَاسُ التَّقْوَى ذَلِكَ خَيْرٌ﴾. (٣) إعادة المبتدأ بلفظه: ﴿الْحَاقَّةُ مَا الْحَاقَّةُ﴾. (٤) العموم: زيدٌ نعمَ الرجلُ.',
+              example: 'مفرد: «الطالبانِ مجتهدانِ». جملة اسمية: «الحديقةُ أزهارُها متفتحةٌ». جملة فعلية: «المؤمنُ يصدقُ في حديثِهِ».',
+              examTip: 'احفظ الروابط الأربعة بأمثلتها القرآنية والنحوية؛ فهي سؤال أساسي في امتحانات أولى ثانوي أزهر.'
+            },
+            {
+              id: 'b7',
+              num: 7,
+              subtopic: 'استغناء الخبر الجملة عن الرابط',
+              s1: 'وَإِنْ تَكُنْ إِيَّاهُ مَعْنًى اكْتَفَى',
+              s2: 'بِهَا كَنُطْقِي اللَّهُ حَسْبِي وَكَفَى',
+              explanation: 'إذا كانت الجملة الواقعة خبراً هي نفس المبتدأ في المعنى استغنت عن الرابط ولا تحتاج إلى ضمير ولا غيره. ففي قولنا «نُطْقِي اللَّهُ حَسْبِي»: جملة «اللهُ حسبي» هي عين النطق في المعنى، فصح الإخبار بها بلا رابط.',
+              example: '«قولي لا إلهَ إلا اللهُ»، «شعاري الصدقُ منجاةٌ».',
+              examTip: 'علل: لمَ لم تحتج جملة الخبر في «نطقي اللهُ حسبي» إلى رابط؟ لأنها نفس المبتدأ في المعنى.'
+            },
+            {
+              id: 'b8',
+              num: 8,
+              subtopic: 'تحمل الخبر المفرد للضمير',
+              s1: 'وَالْمُفْرَدُ الْجَامِدُ فَارِغٌ وَإِنْ',
+              s2: 'يُشْتَقَّ فَهْوَ ذُو ضَمِيرٍ مُسْتَكِنْ',
+              explanation: 'الخبر المفرد نوعان: (١) جامد: وهو فارغ من الضمير (لا يتحمل ضميراً) نحو «هذا أخوكَ»، إلا إذا أُوّل بمشتق نحو «زيدٌ أسدٌ» (أي شجاع). (٢) مشتق: وهو يتحمل ضميراً مستتراً يعود على المبتدأ ما لم يرفع ظاهراً، نحو «زيدٌ قائمٌ» (أي قائمٌ هو). وإذا جرى الخبر المشتق على غير من هو له وجب إبراز الضمير عند البصريين (زيدٌ هندٌ ضاربُها هو).',
+              example: 'جامد فارغ: «محمدٌ أخوكَ». مشتق متحمل للضمير: «الطالبُ مجتهدٌ (هو)».',
+              examTip: 'تذكر مسألة «إذا جرى الخبر على غير من هو له»: يجب إبراز الضمير عند البصريين مطلقاً، وعند الكوفيين عند خوف اللبس فقط.'
+            },
+            {
+              id: 'b9',
+              num: 9,
+              subtopic: 'الخبر شبه الجملة (الظرف والجار والمجرور)',
+              s1: 'وَأَخْبَرُوا بِظَرْفٍ اوْ بِحَرْفِ جَرْ',
+              s2: 'نَاوِينَ مَعْنَى كَائِنٍ أَوِ اسْتَقَرْ',
+              explanation: 'يقع الخبر ظرفاً (مكانياً أو زمانياً) أو جاراً ومجروراً، وهما في الحقيقة متعلقان بمحذوف وجوباً تقديره اسم فاعل (كائن أو مستقر) فيكون الخبر مفرداً، أو فعل ماضٍ (استقرّ) فيكون الخبر جملة، والظرف والجار والمجرور التامان هما اللذان تحصل بهما الفائدة.',
+              example: '«العصفورُ فوقَ الشجرةِ» (أي كائنٌ أو استقرَّ)، «الكتابُ في الحقيبةِ».',
+              examTip: 'سؤال: ما نوع المتعلق المحذوف في خبر شبه الجملة؟ كون عام (كائن / مستقر / استقر)، أما الكون الخاص فلا يُحذف إلا بدليل.'
+            },
+            {
+              id: 'b10',
+              num: 10,
+              subtopic: 'الإخبار بظرف الزمان عن اسم الذات (الجثة)',
+              s1: 'وَلَا يَكُونُ اسْمُ زَمَانٍ خَبَرَا',
+              s2: 'عَنْ جُثَّةٍ وَإِنْ يُفِدْ فَأَخْبِرَا',
+              explanation: 'ظرف المكان يُخبر به عن الذات (الجثة) مثل «زيدٌ عندكَ»، وعن المعنى مثل «القتالُ عندكَ». أما ظرف الزمان فيُخبر به عن المعنى (الحدث) مثل «الامتحانُ يومَ الخميسِ»، ولا يُخبر به عن الذات (الجثة) فلا يُقال «زيدٌ اليومَ»، إلا إذا أفاد فائدة تامة فيجوز مثل «الليلةَ الهلالُ» و«الرُّطبُ شهري ربيعٍ» (على تقدير مضاف: طلوع الهلال).',
+              example: 'صحيح عن معنى: «السفرُ غداً». صحيح عن ذات لإفادته: «الليلةَ الهلالُ». غير صحيح: «خالدٌ يومَ الجمعةِ».',
+              examTip: 'من الأسئلة المفضلة في امتحانات الأزهر: متى يجوز الإخبار بظرف الزمان عن الجثة؟ مع التمثيل.'
+            },
+            {
+              id: 'b11',
+              num: 11,
+              subtopic: 'حكم الابتداء بالنكرة وضابطه',
+              s1: 'وَلَا يَجُوزُ الِابْتِدَا بِالنَّكِرَهْ',
+              s2: 'مَا لَمْ تُفِدْ كَعِنْدَ زَيْدٍ نَمِرَهْ',
+              explanation: 'الأصل في المبتدأ أن يكون معرفة لأن الحكم على المجهول لا يفيد، فلا يجوز الابتداء بالنكرة إلا إذا تحققت الفائدة بوجود «مسوّغ». وأول المسوغات: أن يتقدم الخبر وهو ظرف أو جار ومجرور على النكرة، مثل: «عِنْدَ زَيْدٍ نَمِرَهْ» (النمرة: كساء من صوف مخطط).',
+              example: '«في الدارِ رجلٌ»، ﴿وَعَلَى أَبْصَارِهِمْ غِشَاوَةٌ﴾.',
+              examTip: 'احفظ مسوغات الابتداء بالنكرة الستة التي نظمها ابن مالك في الأبيات (١١ – ١٣)؛ فهي من أهم مواضع الامتحان.'
+            },
+            {
+              id: 'b12',
+              num: 12,
+              subtopic: 'مسوغات الابتداء بالنكرة (٢، ٣، ٤)',
+              s1: 'وَهَلْ فَتًى فِيكُمْ فَمَا خِلٌّ لَنَا',
+              s2: 'وَرَجُلٌ مِنَ الْكِرَامِ عِنْدَنَا',
+              explanation: 'يواصل ابن مالك ذكر مسوغات الابتداء بالنكرة: (٢) أن يتقدم على النكرة استفهام، نحو «هل فتًى فيكم؟». (٣) أن يتقدم عليها نفي، نحو «ما خِلٌّ لنا». (٤) أن تكون النكرة موصوفة (بمفرد أو جملة أو شبه جملة)، نحو «رجلٌ من الكرامِ عندنا» فـ «من الكرام» صفة لرجل.',
+              example: 'استفهام: ﴿أَإِلَهٌ مَعَ اللَّهِ﴾. نفي: «ما طالبٌ مقصّرٌ». وصف: ﴿وَلَعَبْدٌ مُؤْمِنٌ خَيْرٌ مِنْ مُشْرِكٍ﴾.',
+              examTip: 'استخرج المسوّغ من الأمثلة: قد يأتيك مثال في الامتحان ويُطلب ذكر المسوّغ الذي أباح الابتداء بالنكرة.'
+            },
+            {
+              id: 'b13',
+              num: 13,
+              subtopic: 'مسوغات الابتداء بالنكرة (٥، ٦) والقياس عليها',
+              s1: 'وَرَغْبَةٌ فِي الْخَيْرِ خَيْرٌ وَعَمَلْ',
+              s2: 'بِرٍّ يَزِينُ وَلْيُقَسْ مَا لَمْ يُقَلْ',
+              explanation: 'المسوّغ (٥): أن تكون النكرة عاملة فيما بعدها، نحو «رغبةٌ في الخيرِ خيرٌ» (فالجار والمجرور متعلق برغبة). المسوّغ (٦): أن تكون النكرة مضافة إلى نكرة فتتخصص بها، نحو «عملُ برٍّ يزينُ». ثم نبه ابن مالك بقوله «ولْيُقَسْ ما لم يُقَلْ» أن المسوغات كثيرة (تصل لأكثر من ثلاثين) وضابطها العام حصول الفائدة، مثل الدعاء (سلامٌ عليكم) أو كونها عامة (كلٌّ يموت) أو في معرض التفصيل.',
+              example: 'عاملة: «أمرٌ بمعروفٍ صدقةٌ». مضافة: «خمسُ صلواتٍ كتبهنَّ اللهُ». دعاء: ﴿سَلَامٌ عَلَى إِلْ يَاسِينَ﴾.',
+              examTip: 'سؤال أزهري: لماذا جاز الابتداء بالنكرة في «عملُ برٍّ يزينُ» و«سلامٌ عليكم» و«رغبةٌ في الخيرِ خيرٌ»؟'
+            },
+            {
+              id: 'b14',
+              num: 14,
+              subtopic: 'الأصل في ترتيب المبتدأ والخبر وجواز التقديم',
+              s1: 'وَالْأَصْلُ فِي الْأَخْبَارِ أَنْ تُؤَخَّرَا',
+              s2: 'وَجَوَّزُوا التَّقْدِيمَ إِذْ لَا ضَرَرَا',
+              explanation: 'الأصل أن يتقدم المبتدأ ويتأخر الخبر؛ لأن الخبر وصف في المعنى للمبتدأ وحق الوصف التأخير. ومع ذلك يجوز تقديم الخبر على المبتدأ إذا لم يوجد مانع ولا لبس (إذ لا ضررا)، نحو: «قائمٌ زيدٌ»، و«في المعهدِ الطلابُ».',
+              example: 'جواز التقديم: «مجتهدٌ خالدٌ»، «ممنوعٌ التدخينُ»، «في التأني السلامةُ».',
+              examTip: 'رتّب أحكام تقديم الخبر في ذهنك إلى ٣ أقسام: جائز، وممتنع (واجب التأخير)، وواجب التقديم.'
+            },
+            {
+              id: 'b15',
+              num: 15,
+              subtopic: 'مواضع وجوب تأخير الخبر (منع التقديم)',
+              s1: 'فَامْنَعْهُ حِينَ يَسْتَوِي الْجُزْءَانِ',
+              s2: 'عُرْفًا وَنُكْرًا عَادِمَيْ بَيَانِ',
+              explanation: 'يجب تأخير الخبر (يمتنع تقديمه) في خمسة مواضع، أولها ما ذكره هنا: إذا استوى المبتدأ والخبر في التعريف (أخي صديقي) أو في التنكير الصالح للابتداء (أفضلُ منك أفضلُ مني) ولم توجد قرينة تميز المبتدأ من الخبر. والمواضع الأخرى هي: أن يكون الخبر فعلاً رافعاً لضمير المبتدأ (زيدٌ قامَ)، أو محصوراً بإنما أو إلا (ما زيدٌ إلا شاعرٌ)، أو خبراً لمبتدأ اقترن بلام الابتداء (لَزيدٌ قائمٌ)، أو لمبتدأ له الصدارة (مَن لي منجداً؟).',
+              example: 'تساوي التعريف بلا قرينة: «أخي صديقي». مع قرينة يجوز التقديم: «أبو حنيفةَ أبو يوسفَ» (المعنى أبو يوسف كأبي حنيفة).',
+              examTip: 'انتبه: إذا قلتَ «قامَ زيدٌ» بتقديم الخبر الفعلي صار جملة فعلية (فعل وفاعل) لا مبتدأ وخبراً!'
+            },
+            {
+              id: 'b16',
+              num: 16,
+              subtopic: 'مواضع وجوب تقديم الخبر (١: النكرة المحضة والضمير)',
+              s1: 'وَنَحْوُ عِنْدِي دِرْهَمٌ وَلِي وَطَرْ',
+              s2: 'مُلْتَزَمٌ فِيهِ تَقَدُّمُ الْخَبَرْ',
+              explanation: 'يجب تقديم الخبر على المبتدأ في أربعة مواضع، منها ما في هذا البيت: (١) إذا كان المبتدأ نكرة محضة لا مسوّغ لها إلا تقدم الخبر وكان الخبر ظرفاً أو جاراً ومجروراً، نحو «عندي درهمٌ» و«لي وَطَرٌ» (حاجة). (٢) إذا اتصل بالمبتدأ ضمير يعود على بعض الخبر نحو: «في الدارِ صاحبُها» (حتى لا يعود الضمير على متأخر لفظاً ورتبة).',
+              example: '«في الفصلِ طالبٌ»، «للصبرِ عاقبتُهُ»، «على المسلمِ واجبُهُ».',
+              examTip: 'سؤال شهير: علل وجوب تقديم الخبر في «في الدارِ صاحبُها»؟ لئلا يعود الضمير على متأخر لفظاً ورتبة.'
+            },
+            {
+              id: 'b17',
+              num: 17,
+              subtopic: 'مواضع وجوب تقديم الخبر (٢: المحصور وذو الصدارة)',
+              s1: 'وَخَبَرَ الْمَحْصُورِ قَدِّمْ أَبَدَا',
+              s2: 'كَمَا لَنَا إِلَّا اتِّبَاعُ أَحْمَدَا',
+              explanation: 'من مواضع وجوب تقديم الخبر أيضاً: (٣) إذا كان المبتدأ محصوراً في الخبر بـ «إلا» أو «إنما»؛ فيجب تقديم الخبر وتأخير المبتدأ المحصور، نحو: «ما لنا إلّا اتّباعُ أحمدَا» و«إنما في المعهدِ المجتهدونَ». (٤) إذا كان الخبر مما له الصدارة في الكلام كأسماء الاستفهام نحو: «أينَ مَن علمتَهُ نصيراً؟» و«متى السفرُ؟».',
+              example: '«ما شاعرٌ إلّا شوقي»، «أينَ الكتابُ؟»، «كيفَ حالُكَ؟».',
+              examTip: 'فرّق بدقة: إذا كان المحصور هو الخبر وجب تأخير الخبر (ما زيدٌ إلّا قائمٌ)، وإذا كان المحصور هو المبتدأ وجب تقديم الخبر (ما قائمٌ إلّا زيدٌ).'
+            },
+            {
+              id: 'b18',
+              num: 18,
+              subtopic: 'حذف المبتدأ أو الخبر جوازاً',
+              s1: 'وَحَذْفُ مَا يُعْلَمُ جَائِزٌ كَمَا',
+              s2: 'تَقُولُ زَيْدٌ بَعْدَ مَنْ عِنْدَكُمَا',
+              explanation: 'يجوز حذف كل من المبتدأ أو الخبر إذا دلّ عليه دليل وعُلم من السياق. فمثال حذف الخبر جوازاً: أن يُقال «مَن عندكما؟» فتقول: «زيدٌ» (أي: زيدٌ عندنا). ومثال حذف المبتدأ جوازاً: أن يُقال «كيف زيدٌ؟» فتقول: «صحيحٌ» (أي: هو صحيحٌ)، وقوله تعالى: ﴿مَنْ عَمِلَ صَالِحًا فَلِنَفْسِهِ﴾ (أي فعمله لنفسه).',
+              example: 'حذف الخبر: «خرجتُ فإذا الأسدُ» (أي حاضرٌ). حذف المبتدأ: ﴿سُورَةٌ أَنْزَلْنَاهَا﴾ (أي هذه سورةٌ).',
+              examTip: 'قد يُحذف المبتدأ والخبر معاً إذا دل عليهما دليل نحو: «نعم» في جواب «أزيدٌ قائمٌ؟».'
+            },
+            {
+              id: 'b19',
+              num: 19,
+              subtopic: 'حذف الخبر وجوباً (بعد لولا وبعد نص اليمين)',
+              s1: 'وَبَعْدَ لَوْلَا غَالِبًا حَذْفُ الْخَبَرْ',
+              s2: 'حَتْمٌ وَفِي نَصِّ يَمِينٍ ذَا اسْتَقَرْ',
+              explanation: 'يجب حذف الخبر في أربعة مواضع، ذكر منها هنا موضعين: (١) بعد «لولا» الامتناعية إذا كان الخبر كوناً عاماً (وهو الغالب)، نحو: «لولا زيدٌ لأتيتُكَ» (التقدير: موجودٌ)؛ أما إن كان كوناً خاصاً ودلّ عليه دليل جاز ذكره أو حذفه. (٢) إذا كان المبتدأ نصّاً صريحاً في اليمين نحو: «لَعَمْرُكَ لأفعلنَّ» (التقدير: قَسَمي)؛ فإن لم يكن نصاً في اليمين (مثل: عهدُ اللهِ) جاز الذكر والحذف.',
+              example: 'بعد لولا: «لولا العلمُ لسادَ الجهلُ». بعد نص يمين: «يمينُ اللهِ لأجتهدنَّ» (التقدير: قسمي).',
+              examTip: 'انتبه لكلمة «غالباً» في البيت؛ لأن الخبر بعد لولا إذا كان كوناً خاصاً لا دليل عليه وجب ذكره نحو: «لولا زيدٌ محسنٌ إليَّ ما أتيتُ».'
+            },
+            {
+              id: 'b20',
+              num: 20,
+              subtopic: 'حذف الخبر وجوباً (بعد واو المصاحبة وقبل الحال السادّة مسدّ الخبر)',
+              s1: 'وَبَعْدَ وَاوٍ عَيَّنَتْ مَفْهُومَ مَعْ',
+              s2: 'كَمِثْلِ كُلُّ صَانِعٍ وَمَا صَنَعْ',
+              explanation: 'الموضع (٣) من وجوب حذف الخبر: أن يقع المبتدأ قبل واو هي نصّ في المعية (المصاحبة)، نحو: «كلُّ صانعٍ وما صنعَ» و«كلُّ طالبٍ وكتابُهُ» (التقدير: مقترنان). والموضع (٤): قبل حال لا تصلح أن تكون خبراً عن المبتدأ فتسدّ مسدّه، وذلك مع المصدر المضاف لمعموله نحو: «ضَرْبِيَ العبدَ مسيئاً» (التقدير: إذ كان مسيئاً).',
+              example: '«كلُّ جنديٍّ وسلاحُهُ (مقترنان)»، «أكثرُ شربي السويقَ ملتوتاً».',
+              examTip: 'احفظ مواضع حذف الخبر وجوباً الأربعة: بعد لولا (للكون العام)، نص اليمين، واو المصاحبة، وقبل الحال السادة مسد الخبر.'
+            },
+            {
+              id: 'b21',
+              num: 21,
+              subtopic: 'تعدد الخبر لمبتدأ واحد',
+              s1: 'وَأَخْبَرُوا بِاثْنَيْنِ أَوْ بِأَكْثَرَا',
+              s2: 'عَنْ وَاحِدٍ كَهُمْ سَرَاةٌ شُعَرَا',
+              explanation: 'يجوز أن يتعدد الخبر لمبتدأ واحد بغير حرف عطف، سواء كان الخبران في معنى خبر واحد مثل «هذا حُلوٌ حامضٌ» (أي مُزّ، وهنا لا يصح العطف)، أو كان كل منهما خبراً مستقلاً مثل «هم سراةٌ شعراءُ» (وهنا يجوز العطف وعدمه).',
+              example: '﴿وَهُوَ الْغَفُورُ الْوَدُودُ * ذُو الْعَرْشِ الْمَجِيدُ * فَعَّالٌ لِمَا يُرِيدُ﴾.',
+              examTip: 'سؤال ختامي مهم: فرّق بين «الرمانُ حلوٌ حامضٌ» (لا يجوز العطف لأنهما بمعنى واحد) و«زيدٌ كاتبٌ شاعرٌ» (يجوز العطف وعدمه).'
+            }
+          ]
+        }
+      ];
+
+      /* =========================================================================
+       * 2. INTERACTIVE AZHAR QUIZ QUESTIONS (15 Questions across all 4 chapters)
+       * ========================================================================= */
+      const QUIZ_QUESTIONS = [
+        {
+          q: 'في قولنا: «إن قام زيدٌ»، يُعدّ هذا التركيب عند النحاة:',
+          options: ['كلاماً وكَلِماً معاً', 'كَلِماً وليس كلاماً', 'كلاماً وليس كَلِماً', 'كلمة واحدة'],
+          correct: 1,
+          explain: 'لأنه يتألف من ثلاث كلمات فهو «كَلِم»، ولكنه لم يُفِد فائدة يحسن السكوت عليها فلا يُسمى «كلاماً».'
+        },
+        {
+          q: 'أنفع علامات الاسم التي يُستدل بها على اسمية الضمائر هي:',
+          options: ['التنوين', 'الجر', 'الإسناد إليه', 'دخول أل'],
+          correct: 2,
+          explain: 'لأن الضمائر لا تقبل الجر ولا التنوين ولا النداء ولا «أل»، وإنما يُعرف أنها أسماء بصحة الإسناد إليها نحو: «أنا مجتهدٌ».'
+        },
+        {
+          q: 'تُعدّ كلمتا «صَهْ» و«حَيَّهَلْ» من:',
+          options: ['أفعال الأمر المبنية', 'أسماء أفعال الأمر', 'الأفعال المضارعة', 'الحروف المختصة'],
+          correct: 1,
+          explain: 'لأنهما تدلان على الطلب ولكن لا تقبلان نون التوكيد؛ قال ابن مالك: «والأمرُ إن لم يكُ للنونِ محلْ * فيه هو اسمٌ نحوُ صهْ وحيَّهلْ».'
+        },
+        {
+          q: 'سبب بناء التاء و«نا» في قولنا «جِئْتَنَا» هو:',
+          options: ['الشبه المعنوي', 'الشبه الاستعمالي', 'الشبه الوضعي', 'الشبه الافتقاري'],
+          correct: 2,
+          explain: 'لأن التاء وُضعت على حرف واحد و«نا» على حرفين كالحروف، وهو ما يُعرف بالشبه الوضعي.'
+        },
+        {
+          q: 'حكم الفعل المضارع في قوله تعالى: ﴿لَتُبْلَوُنَّ فِي أَمْوَالِكُمْ﴾ هو:',
+          options: ['مبني على الفتح', 'مبني على السكون', 'معرب مرفوع بثبوت النون المحذوفة', 'مبني على الضم'],
+          correct: 2,
+          explain: 'لأن نون التوكيد لم تباشر الفعل لوجود فاصل مقدّر وهو واو الجماعة، فيبقى المضارع معرباً.'
+        },
+        {
+          q: 'في قولنا: «حضرَ كلا الطالبينِ»، تُعرب كلمة «كلا»:',
+          options: ['فاعلاً مرفوعاً بالألف لأنه ملحق بالمثنى', 'فاعلاً مرفوعاً بضمة مقدرة على الألف للتعذر', 'مبتدأ مرفوعاً بالضمة الظاهرة', 'توكيداً معنوياً مرفوعاً بالألف'],
+          correct: 1,
+          explain: 'لأن «كلا» لا تُلحق بالمثنى إلا إذا أُضيفت إلى ضمير، أما عند إضافتها لاسم ظاهر فتُعرب بحركات مقدرة كالمقصور.'
+        },
+        {
+          q: 'يُجرّ الممنوع من الصرف بالكسرة إذا:',
+          options: ['كان علماً مؤنثاً', 'أُضيف أو اقترن بـ «أل»', 'جاء بعد حرف جر أصلي', 'كان جمع تكسير'],
+          correct: 1,
+          explain: 'قال ابن مالك: «وجُرّ بالفتحةِ ما لا ينصرفْ * ما لم يُضَفْ أو يكُ بعدَ أل ردفْ».'
+        },
+        {
+          q: 'الأحسن والأفصح في كلمة «هَنٌ» من الأسماء الستة هو:',
+          options: ['الإتمام بالحروف', 'القصر بالألف', 'النقص (الإعراب بالحركات الظاهرة)', 'البناء على السكون'],
+          correct: 2,
+          explain: 'قال ابن مالك: «أبٌ أخٌ حمٌ كذاكَ وهَنُ * والنقصُ في هذا الأخيرِ أحسنُ».'
+        },
+        {
+          q: 'نوع «أل» في كلمة «الآنَ» وفي الاسم الموصول «الذينَ» هو:',
+          options: ['عهدية ذكرية', 'جنسية للاستغراق', 'زائدة لازمة', 'زائدة غير لازمة للمح الأصل'],
+          correct: 2,
+          explain: 'قال ابن مالك: «وقد تُزادُ لازماً كاللاتِ * والآنَ والذينَ ثم اللاتي».'
+        },
+        {
+          q: 'إذا اجتمع الاسم واللقب وكانا مفردين أو غيرهما (ولم يشتهر اللقب)، فالحكم هو:',
+          options: ['تقديم اللقب وجوباً', 'تأخير اللقب وجوباً', 'جواز التقديم والتأخير مطلقاً', 'حذف الاسم'],
+          correct: 1,
+          explain: 'قال ابن مالك: «واسماً أتى وكنيةً ولقبا * وأخّرنْ ذا إن سواهُ صحبا».'
+        },
+        {
+          q: 'في قولنا: «أقائمٌ الزيدانِ؟»، إعراب كلمة «الزيدانِ» هو:',
+          options: ['خبر مرفوع بالألف', 'مبتدأ مؤخر مرفوع بالألف', 'فاعل مرفوع بالألف سدّ مسدّ الخبر', 'نعت مرفوع بالألف'],
+          correct: 2,
+          explain: 'لأن الوصف «قائم» مفرد اعتمد على استفهام وجاء بعده مثنى، فيتعين كون الوصف مبتدأ وما بعده فاعلاً سدّ مسدّ الخبر.'
+        },
+        {
+          q: 'سبب استغناء جملة الخبر عن الرابط في «نُطْقِي اللَّهُ حَسْبِي» هو:',
+          options: ['تقدم الخبر على المبتدأ', 'أن الجملة نفس المبتدأ في المعنى', 'وجود ضمير مستتر في «حسبي»', 'كون المبتدأ نكرة'],
+          correct: 1,
+          explain: 'قال ابن مالك: «وإن تكن إيّاهُ معنىً اكتفى * بها كنطقي اللهُ حسبي وكفى».'
+        },
+        {
+          q: 'المسوّغ الذي أباح الابتداء بالنكرة في قولنا «عَمَلُ بِرٍّ يَزِينُ» هو:',
+          options: ['تقدم الخبر شبه الجملة', 'الوصف', 'الإضافة إلى نكرة', 'تقدم النفي'],
+          correct: 2,
+          explain: 'أُضيفت النكرة «عمل» إلى نكرة مثلها «برّ» فتخصصت بها، فصح الابتداء بها.'
+        },
+        {
+          q: 'حكم تقديم الخبر في قولنا: «في الدارِ صاحبُها» هو:',
+          options: ['جائز التقديم والتأخير', 'واجب التأخير', 'واجب التقديم', 'ممتنع النطق به'],
+          correct: 2,
+          explain: 'يجب تقديم الخبر لأن في المبتدأ ضميراً يعود على بعض الخبر؛ فلو تأخر الخبر لعاد الضمير على متأخر لفظاً ورتبة.'
+        },
+        {
+          q: 'تقدير الخبر المحذوف وجوباً في قولنا: «كلُّ صانعٍ وما صنعَ» هو:',
+          options: ['موجودٌ', 'قَسَمي', 'مقترنانِ', 'حاضرٌ'],
+          correct: 2,
+          explain: 'لأن الواو هنا نصٌّ في المعية والمصاحبة، فيُحذف الخبر وجوباً وتقديره «مقترنانِ».'
+        }
+      ];
+
+      /* =========================================================================
+       * 3. STATE MANAGEMENT & LOCAL STORAGE
+       * ========================================================================= */
+      const STORAGE_KEY = 'alfiyyah_azhar_2026_mastered_v1';
+      const FONT_KEY = 'alfiyyah_azhar_2026_font_v1';
+
+      const state = {
+        activeTab: CHAPTERS[0].id, // 'kalam' | 'murab' | 'nakirah' | 'mubtada' | 'quiz'
+        searchQuery: '',
+        filter: 'all', // 'all' | 'remaining' | 'done'
+        reviewMode: false,
+        fontScale: 0, // -1, 0, 1, 2
+        mastered: new Set(),
+        revealedInReview: new Set(),
+        quizAnswers: {} // { questionIndex: selectedOptionIndex }
+      };
+
+      // Load saved progress safely
+      function loadSavedState() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          if (raw) {
+            const arr = JSON.parse(raw);
+            if (Array.isArray(arr)) {
+              state.mastered = new Set(arr);
+            }
+          }
+          const savedFont = localStorage.getItem(FONT_KEY);
+          if (savedFont !== null) {
+            const parsed = parseInt(savedFont, 10);
+            if (!Number.isNaN(parsed) && parsed >= -1 && parsed <= 2) {
+              state.fontScale = parsed;
+            }
+          }
+        } catch (err) {
+          console.error('Error loading localStorage:', err);
+        }
+      }
+
+      function saveProgress() {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(state.mastered)));
+        } catch (err) {
+          console.error('Error saving progress:', err);
+        }
+      }
+
+      function saveFontScale() {
+        try {
+          localStorage.setItem(FONT_KEY, String(state.fontScale));
+        } catch (err) {
+          console.error('Error saving font scale:', err);
+        }
+      }
+
+      /* =========================================================================
+       * 4. UTILITY FUNCTIONS
+       * ========================================================================= */
+      // Strip Arabic diacritics (tashkeel) and normalize Alef/Ta Marbuta for smart search
+      function normalizeArabic(text) {
+        if (!text) return '';
+        return text
+          .replace(/[\u064B-\u065F\u0670\u06D6-\u06ED]/g, '')
+          .replace(/[أإآ]/g, 'ا')
+          .replace(/ة/g, 'ه')
+          .replace(/ى/g, 'ي')
+          .toLowerCase()
+          .trim();
+      }
+
+      function getTotalVersesCount() {
+        return CHAPTERS.reduce((sum, ch) => sum + ch.verses.length, 0);
+      }
+
+      function getChapterMasteredCount(chapter) {
+        return chapter.verses.filter((v) => state.mastered.has(v.id)).length;
+      }
+
+      let toastTimer = null;
+      function showToast(message) {
+        const toast = document.getElementById('toast');
+        if (!toast) return;
+        toast.textContent = message;
+        toast.classList.remove('hidden');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          toast.classList.add('hidden');
+        }, 2300);
+      }
+
+      // Copy text using execCommand for iframe compatibility
+      function copyTextToClipboard(text) {
+        try {
+          const textarea = document.createElement('textarea');
+          textarea.value = text;
+          textarea.style.position = 'fixed';
+          textarea.style.opacity = '0';
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+          showToast('تم نسخ البيت بنجاح ✓');
+        } catch (err) {
+          showToast('تعذّر النسخ، يمكنك التحديد يدوياً');
+        }
+      }
+
+      function getVerseFontClass() {
+        const map = {
+          '-1': 'text-lg sm:text-xl',
+          '0': 'text-xl sm:text-2xl',
+          '1': 'text-2xl sm:text-3xl',
+          '2': 'text-3xl sm:text-4xl'
+        };
+        return map[String(state.fontScale)] || map['0'];
+      }
+
+      function getBodyFontClass() {
+        const map = {
+          '-1': 'text-xs sm:text-sm',
+          '0': 'text-sm sm:text-base',
+          '1': 'text-base sm:text-lg',
+          '2': 'text-lg sm:text-xl'
+        };
+        return map[String(state.fontScale)] || map['0'];
+      }
+
+      /* =========================================================================
+       * 5. RENDERING FUNCTIONS
+       * ========================================================================= */
+      function updateGlobalProgress() {
+        const total = getTotalVersesCount();
+        const done = state.mastered.size;
+        const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+
+        document.getElementById('progress-text').textContent = `تمت مذاكرة ${done} من أصل ${total} بيت`;
+        document.getElementById('progress-percent').textContent = `${pct}%`;
+        document.getElementById('progress-bar').style.width = `${pct}%`;
+      }
+
+      function renderTabs() {
+        const container = document.getElementById('chapter-tabs');
+        container.innerHTML = '';
+
+        CHAPTERS.forEach((ch) => {
+          const isActive = state.activeTab === ch.id;
+          const doneCount = getChapterMasteredCount(ch);
+          const totalCount = ch.verses.length;
+
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = isActive
+            ? 'inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold bg-azhar text-parchment-card shadow-sm border border-azhar transition cursor-pointer'
+            : 'inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-parchment-card text-ink hover:bg-azhar-soft hover:text-azhar-dark border border-parchment-border transition cursor-pointer';
+
+          btn.innerHTML = `
+            <span>${ch.shortTitle}</span>
+            <span class="text-[11px] px-1.5 py-0.5 rounded-md ${isActive ? 'bg-azhar-dark text-gold-pale' : 'bg-parchment-dark text-ink-muted'}">${doneCount}/${totalCount}</span>
+          `;
+
+          btn.addEventListener('click', () => {
+            state.activeTab = ch.id;
+            renderAll();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          });
+
+          container.appendChild(btn);
+        });
+
+        // Quiz Tab
+        const isQuizActive = state.activeTab === 'quiz';
+        const quizBtn = document.createElement('button');
+        quizBtn.type = 'button';
+        quizBtn.className = isQuizActive
+          ? 'inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold bg-gold text-parchment-card shadow-sm border border-gold transition cursor-pointer'
+          : 'inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold bg-gold-pale text-gold hover:bg-gold hover:text-parchment-card border border-gold-soft transition cursor-pointer';
+
+        quizBtn.innerHTML = `
+          <span>✍️ اختبر نفسك (${QUIZ_QUESTIONS.length})</span>
+        `;
+
+        quizBtn.addEventListener('click', () => {
+          state.activeTab = 'quiz';
+          renderAll();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        container.appendChild(quizBtn);
+      }
+
+      function renderVerses() {
+        const chapterBanner = document.getElementById('chapter-banner');
+        const versesContainer = document.getElementById('verses-container');
+        const emptyState = document.getElementById('empty-state');
+        const quizSection = document.getElementById('quiz-section');
+        const studyToolbar = document.getElementById('study-toolbar');
+
+        if (state.activeTab === 'quiz') {
+          chapterBanner.classList.add('hidden');
+          versesContainer.classList.add('hidden');
+          emptyState.classList.add('hidden');
+          studyToolbar.classList.add('hidden');
+          quizSection.classList.remove('hidden');
+          renderQuiz();
+          return;
+        }
+
+        // Study mode active
+        quizSection.classList.add('hidden');
+        studyToolbar.classList.remove('hidden');
+        versesContainer.classList.remove('hidden');
+
+        const queryNorm = normalizeArabic(state.searchQuery);
+        let versesToShow = [];
+
+        if (queryNorm.length > 0) {
+          // Global search across ALL 4 chapters so student finds any verse instantly
+          CHAPTERS.forEach((ch) => {
+            ch.verses.forEach((v) => {
+              const searchable = normalizeArabic(`${v.s1} ${v.s2} ${v.subtopic} ${v.explanation} ${v.example} ${v.examTip} ${ch.title}`);
+              if (searchable.includes(queryNorm)) {
+                versesToShow.push({ ...v, chapterShort: ch.shortTitle });
+              }
+            });
+          });
+
+          chapterBanner.classList.remove('hidden');
+          document.getElementById('chapter-badge').textContent = 'نتائج البحث الشامل في المنهج';
+          document.getElementById('chapter-title').textContent = `البحث عن: «${state.searchQuery}»`;
+          document.getElementById('chapter-desc').textContent = 'يعرض البحث جميع الأبيات المطابقة من الأبواب الأربعة المقررة للترم الأول.';
+          document.getElementById('chapter-stats').textContent = `${versesToShow.length} بيت مطابق`;
+        } else {
+          const activeChapter = CHAPTERS.find((c) => c.id === state.activeTab) || CHAPTERS[0];
+          versesToShow = activeChapter.verses.map((v) => ({ ...v, chapterShort: '' }));
+
+          chapterBanner.classList.remove('hidden');
+          document.getElementById('chapter-badge').textContent = activeChapter.badge;
+          document.getElementById('chapter-title').textContent = activeChapter.title;
+          document.getElementById('chapter-desc').textContent = activeChapter.description;
+          const doneInCh = getChapterMasteredCount(activeChapter);
+          document.getElementById('chapter-stats').textContent = `أُتقن ${doneInCh} من ${activeChapter.verses.length}`;
+        }
+
+        // Apply completion filter
+        if (state.filter === 'done') {
+          versesToShow = versesToShow.filter((v) => state.mastered.has(v.id));
+        } else if (state.filter === 'remaining') {
+          versesToShow = versesToShow.filter((v) => !state.mastered.has(v.id));
+        }
+
+        versesContainer.innerHTML = '';
+
+        if (versesToShow.length === 0) {
+          emptyState.classList.remove('hidden');
+          return;
+        }
+        emptyState.classList.add('hidden');
+
+        const verseFontClass = getVerseFontClass();
+        const bodyFontClass = getBodyFontClass();
+
+        versesToShow.forEach((v) => {
+          const isMastered = state.mastered.has(v.id);
+          const isHiddenExplanation = state.reviewMode && !state.revealedInReview.has(v.id);
+
+          const card = document.createElement('article');
+          card.className = `bg-parchment-card rounded-2xl border transition-all duration-200 overflow-hidden shadow-sm hover:shadow-md ${
+            isMastered ? 'border-azhar/60 ring-1 ring-azhar/20' : 'border-parchment-border'
+          }`;
+
+          card.innerHTML = `
+            <!-- Card Top Bar -->
+            <div class="flex flex-wrap items-center justify-between gap-2 px-4 sm:px-6 py-3 bg-parchment-dark/60 border-b border-parchment-border/80">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="inline-flex items-center justify-center min-w-[2.1rem] h-7 px-2 rounded-lg text-xs font-extrabold ${
+                  isMastered ? 'bg-azhar text-parchment-card' : 'bg-gold-pale text-gold border border-gold-soft/50'
+                }">
+                  بيت ${v.num}
+                </span>
+                <span class="text-xs sm:text-sm font-bold text-azhar-dark bg-azhar-soft/80 px-2.5 py-1 rounded-lg border border-azhar/15">
+                  ${v.subtopic}
+                </span>
+                ${v.chapterShort ? `<span class="text-xs font-semibold text-ink-muted bg-parchment px-2 py-0.5 rounded-md border border-parchment-border">${v.chapterShort}</span>` : ''}
+              </div>
+
+              <div class="flex items-center gap-2">
+                <button type="button" data-copy-id="${v.id}" title="نسخ البيت" class="p-1.5 rounded-lg text-ink-muted hover:text-azhar hover:bg-parchment-card border border-transparent hover:border-parchment-border transition cursor-pointer">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                  </svg>
+                </button>
+                <button type="button" data-toggle-mastered="${v.id}" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-bold transition cursor-pointer ${
+                  isMastered
+                    ? 'bg-azhar text-parchment-card hover:bg-azhar-dark'
+                    : 'bg-parchment-card text-azhar-dark border border-azhar/30 hover:bg-azhar-soft'
+                }">
+                  <span>${isMastered ? 'أتممت فهم البيت ✓' : 'تحديد كمفهوم'}</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Poetic Verse Box (Two Balanced Hemistichs) -->
+            <div class="px-4 sm:px-6 py-5 bg-gradient-to-b from-gold-pale/45 to-parchment-card border-b border-parchment-border/60">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 items-center text-center">
+                <p class="font-amiri ${verseFontClass} font-bold text-ink leading-loose">${v.s1}</p>
+                <p class="font-amiri ${verseFontClass} font-bold text-ink leading-loose md:border-r md:border-gold-soft/40 md:pr-6">${v.s2}</p>
+              </div>
+            </div>
+
+            <!-- Review Mode Hidden Curtain OR Full Explanation -->
+            ${
+              isHiddenExplanation
+                ? `
+                <div class="px-5 py-5 text-center bg-parchment/40">
+                  <p class="text-xs sm:text-sm text-ink-muted mb-3">وضع المراجعة مُفعّل — حاول شرح البيت واستحضار القاعدة والأمثلة قبل إظهار الشرح.</p>
+                  <button type="button" data-reveal-id="${v.id}" class="px-4 py-2 rounded-xl bg-azhar hover:bg-azhar-dark text-parchment-card text-xs sm:text-sm font-bold transition cursor-pointer">
+                    إظهار شرح البيت
+                  </button>
+                </div>
+                `
+                : `
+                <div class="p-4 sm:p-6 space-y-4 ${bodyFontClass}">
+                  <!-- Explanation -->
+                  <div>
+                    <h4 class="text-xs sm:text-sm font-extrabold text-azhar flex items-center gap-1.5 mb-1.5">
+                      <span class="w-2 h-2 rounded-full bg-azhar"></span>
+                      <span>الشرح المبسط (وفق ابن عقيل)</span>
+                    </h4>
+                    <p class="text-ink leading-relaxed">${v.explanation}</p>
+                  </div>
+
+                  <!-- Example & Exam Tip Grid -->
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 pt-1">
+                    <div class="bg-parchment/80 border border-parchment-border rounded-xl p-3.5">
+                      <h5 class="text-xs font-extrabold text-azhar-dark mb-1">📌 المثال والتوضيح</h5>
+                      <p class="text-ink-muted text-xs sm:text-sm leading-relaxed">${v.example}</p>
+                    </div>
+                    <div class="bg-gold-pale/80 border border-gold-soft/45 rounded-xl p-3.5">
+                      <h5 class="text-xs font-extrabold text-gold mb-1">🎓 موضع الامتحان / فائدة أزهرية</h5>
+                      <p class="text-ink text-xs sm:text-sm leading-relaxed">${v.examTip}</p>
+                    </div>
+                  </div>
+                </div>
+                `
+            }
+          `;
+
+          // Bind card buttons
+          const copyBtn = card.querySelector(`[data-copy-id="${v.id}"]`);
+          if (copyBtn) {
+            copyBtn.addEventListener('click', () => {
+              copyTextToClipboard(`${v.s1}   ***   ${v.s2}`);
+            });
+          }
+
+          const masterBtn = card.querySelector(`[data-toggle-mastered="${v.id}"]`);
+          if (masterBtn) {
+            masterBtn.addEventListener('click', () => {
+              if (state.mastered.has(v.id)) {
+                state.mastered.delete(v.id);
+              } else {
+                state.mastered.add(v.id);
+                showToast('أحسنت! تمت إضافة البيت إلى الأبيات المُتقنة ✓');
+              }
+              saveProgress();
+              updateGlobalProgress();
+              renderTabs();
+              renderVerses();
+            });
+          }
+
+          const revealBtn = card.querySelector(`[data-reveal-id="${v.id}"]`);
+          if (revealBtn) {
+            revealBtn.addEventListener('click', () => {
+              state.revealedInReview.add(v.id);
+              renderVerses();
+            });
+          }
+
+          versesContainer.appendChild(card);
+        });
+      }
+
+      /* =========================================================================
+       * 6. INTERACTIVE QUIZ LOGIC
+       * ========================================================================= */
+      function renderQuiz() {
+        const container = document.getElementById('quiz-container');
+        const scoreBadge = document.getElementById('quiz-score-badge');
+        const finalBox = document.getElementById('quiz-final-box');
+
+        let correctCount = 0;
+        let answeredCount = 0;
+
+        QUIZ_QUESTIONS.forEach((item, idx) => {
+          if (state.quizAnswers[idx] !== undefined) {
+            answeredCount++;
+            if (state.quizAnswers[idx] === item.correct) {
+              correctCount++;
+            }
+          }
+        });
+
+        scoreBadge.textContent = `${correctCount} / ${QUIZ_QUESTIONS.length}`;
+        container.innerHTML = '';
+
+        QUIZ_QUESTIONS.forEach((item, qIdx) => {
+          const userAnswer = state.quizAnswers[qIdx];
+          const isAnswered = userAnswer !== undefined;
+
+          const qCard = document.createElement('div');
+          qCard.className = 'bg-parchment/60 border border-parchment-border rounded-2xl p-4 sm:p-5';
+
+          const optionsHtml = item.options
+            .map((opt, oIdx) => {
+              let btnClasses =
+                'w-full text-right px-4 py-3 rounded-xl border text-sm font-semibold transition flex items-center justify-between gap-2 ';
+              let badge = '';
+
+              if (!isAnswered) {
+                btnClasses += 'bg-parchment-card border-parchment-border hover:border-azhar hover:bg-azhar-soft/50 text-ink cursor-pointer';
+              } else if (oIdx === item.correct) {
+                btnClasses += 'bg-emerald-50 border-emerald-600 text-emerald-900 cursor-default';
+                badge = '<span class="text-xs font-extrabold text-emerald-700">✓ إجابة صحيحة</span>';
+              } else if (oIdx === userAnswer && userAnswer !== item.correct) {
+                btnClasses += 'bg-red-50 border-red-500 text-red-900 cursor-default';
+                badge = '<span class="text-xs font-extrabold text-red-700">✕ إجابتك</span>';
+              } else {
+                btnClasses += 'bg-parchment-card/60 border-parchment-border/60 text-ink-muted opacity-75 cursor-default';
+              }
+
+              return `
+                <button type="button" data-q="${qIdx}" data-o="${oIdx}" ${isAnswered ? 'disabled' : ''} class="${btnClasses}">
+                  <span>${opt}</span>
+                  ${badge}
+                </button>
+              `;
+            })
+            .join('');
+
+          qCard.innerHTML = `
+            <div class="flex items-start gap-2.5 mb-3.5">
+              <span class="shrink-0 w-7 h-7 rounded-lg bg-azhar text-parchment-card text-xs font-extrabold flex items-center justify-center">${qIdx + 1}</span>
+              <h3 class="text-sm sm:text-base font-bold text-ink leading-relaxed">${item.q}</h3>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              ${optionsHtml}
+            </div>
+            ${
+              isAnswered
+                ? `
+                <div class="mt-3.5 p-3 rounded-xl text-xs sm:text-sm leading-relaxed ${
+                  userAnswer === item.correct
+                    ? 'bg-emerald-50/90 border border-emerald-200 text-emerald-900'
+                    : 'bg-amber-50/90 border border-amber-300 text-ink'
+                }">
+                  <strong>التوضيح النحوي:</strong> ${item.explain}
+                </div>
+                `
+                : ''
+            }
+          `;
+
+          if (!isAnswered) {
+            qCard.querySelectorAll('button[data-q]').forEach((btn) => {
+              btn.addEventListener('click', () => {
+                const qi = parseInt(btn.getAttribute('data-q'), 10);
+                const oi = parseInt(btn.getAttribute('data-o'), 10);
+                state.quizAnswers[qi] = oi;
+                renderQuiz();
+              });
+            });
+          }
+
+          container.appendChild(qCard);
+        });
+
+        // Show final summary when all questions answered
+        if (answeredCount === QUIZ_QUESTIONS.length) {
+          const pct = Math.round((correctCount / QUIZ_QUESTIONS.length) * 100);
+          finalBox.classList.remove('hidden');
+          document.getElementById('quiz-final-emoji').textContent = pct >= 85 ? '🏆' : pct >= 60 ? '👏' : '📖';
+          document.getElementById('quiz-final-title').textContent =
+            pct >= 85
+              ? `ما شاء الله! نتيجتك ${correctCount} من ${QUIZ_QUESTIONS.length} (${pct}%)`
+              : pct >= 60
+              ? `أحسنت! نتيجتك ${correctCount} من ${QUIZ_QUESTIONS.length} (${pct}%)`
+              : `نتيجتك ${correctCount} من ${QUIZ_QUESTIONS.length} (${pct}%) — واصل المراجعة`;
+          document.getElementById('quiz-final-msg').textContent =
+            pct >= 85
+              ? 'مستوى ممتاز يؤهلك للتفوق في امتحان النحو بالأزهر الشريف بإذن الله.'
+              : 'راجع التوضيحات النحوية أعلاه ثم أعد المحاولة لتثبيت القواعد والشواهد.';
+        } else {
+          finalBox.classList.add('hidden');
+        }
+      }
+
+      function resetQuiz() {
+        state.quizAnswers = {};
+        renderQuiz();
+        showToast('تمت إعادة ضبط الاختبار بنجاح');
+      }
+
+      function renderAll() {
+        updateGlobalProgress();
+        renderTabs();
+        renderVerses();
+      }
+
+      /* =========================================================================
+       * 7. EVENT LISTENERS & INITIALIZATION
+       * ========================================================================= */
+      function initEvents() {
+        // Search Input
+        const searchInput = document.getElementById('search-input');
+        const clearSearchBtn = document.getElementById('btn-clear-search');
+
+        searchInput.addEventListener('input', (e) => {
+          state.searchQuery = e.target.value;
+          clearSearchBtn.classList.toggle('hidden', state.searchQuery.length === 0);
+          renderVerses();
+        });
+
+        clearSearchBtn.addEventListener('click', () => {
+          state.searchQuery = '';
+          searchInput.value = '';
+          clearSearchBtn.classList.add('hidden');
+          renderVerses();
+        });
+
+        // Filter Buttons
+        document.querySelectorAll('.filter-btn').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            state.filter = btn.getAttribute('data-filter');
+            document.querySelectorAll('.filter-btn').forEach((b) => {
+              const active = b.getAttribute('data-filter') === state.filter;
+              b.className = active
+                ? 'filter-btn px-2.5 py-1 rounded-lg font-semibold transition cursor-pointer bg-azhar text-parchment-card'
+                : 'filter-btn px-2.5 py-1 rounded-lg font-semibold transition cursor-pointer text-ink-muted hover:text-ink';
+            });
+            renderVerses();
+          });
+        });
+
+        // Review Mode Toggle
+        const reviewBtn = document.getElementById('btn-review-mode');
+        const reviewLabel = document.getElementById('review-mode-label');
+        reviewBtn.addEventListener('click', () => {
+          state.reviewMode = !state.reviewMode;
+          state.revealedInReview.clear();
+          if (state.reviewMode) {
+            reviewBtn.className =
+              'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-bold border border-azhar bg-azhar text-parchment-card transition cursor-pointer';
+            reviewLabel.textContent = 'إيقاف وضع المراجعة';
+            showToast('تم تفعيل وضع المراجعة — اختبر نفسك في كل بيت');
+          } else {
+            reviewBtn.className =
+              'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-semibold border border-gold-soft bg-gold-pale text-ink hover:bg-gold-soft/20 transition cursor-pointer';
+            reviewLabel.textContent = 'وضع المراجعة (إخفاء الشرح)';
+          }
+          renderVerses();
+        });
+
+        // Reset Filters from Empty State
+        document.getElementById('btn-reset-filters').addEventListener('click', () => {
+          state.searchQuery = '';
+          searchInput.value = '';
+          clearSearchBtn.classList.add('hidden');
+          state.filter = 'all';
+          document.querySelectorAll('.filter-btn').forEach((b) => {
+            const active = b.getAttribute('data-filter') === 'all';
+            b.className = active
+              ? 'filter-btn px-2.5 py-1 rounded-lg font-semibold transition cursor-pointer bg-azhar text-parchment-card'
+              : 'filter-btn px-2.5 py-1 rounded-lg font-semibold transition cursor-pointer text-ink-muted hover:text-ink';
+          });
+          renderVerses();
+        });
+
+        // Font Size Controls
+        document.getElementById('btn-font-inc').addEventListener('click', () => {
+          if (state.fontScale < 2) {
+            state.fontScale++;
+            saveFontScale();
+            renderVerses();
+          }
+        });
+        document.getElementById('btn-font-dec').addEventListener('click', () => {
+          if (state.fontScale > -1) {
+            state.fontScale--;
+            saveFontScale();
+            renderVerses();
+          }
+        });
+
+        // Reset Progress Custom Modal
+        const resetModal = document.getElementById('reset-modal');
+        document.getElementById('btn-reset-modal').addEventListener('click', () => {
+          resetModal.classList.remove('hidden');
+        });
+        document.getElementById('btn-cancel-reset').addEventListener('click', () => {
+          resetModal.classList.add('hidden');
+        });
+        document.getElementById('btn-confirm-reset').addEventListener('click', () => {
+          state.mastered.clear();
+          saveProgress();
+          resetModal.classList.add('hidden');
+          renderAll();
+          showToast('تم تصفير سجل المذاكرة بنجاح');
+        });
+        resetModal.addEventListener('click', (e) => {
+          if (e.target === resetModal) {
+            resetModal.classList.add('hidden');
+          }
+        });
+
+        // Quiz Retry Buttons
+        document.getElementById('btn-retry-quiz').addEventListener('click', resetQuiz);
+        document.getElementById('btn-retry-quiz-bottom').addEventListener('click', () => {
+          resetQuiz();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('btn-scroll-top');
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 380) {
+            scrollTopBtn.classList.remove('hidden');
+          } else {
+            scrollTopBtn.classList.add('hidden');
+          }
+        });
+        scrollTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // Bootstrap Application
+      loadSavedState();
+      initEvents();
+      renderAll();
+    })();
+  </script>
+</body>
+</html>
